@@ -11,14 +11,23 @@
     
 {{-- <link rel="stylesheet" type="text/css" href="{{ url('css/style.css') }}" /> --}}
 {{-- <link rel="stylesheet" type="text/css" href="{{ url('css/global.css') }}" /> --}}
-<link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}" />
-<link rel="stylesheet" type="text/css" href="{{ asset('/css/global.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{('/frontend/css/style.css')}}" />
+<link rel="stylesheet" type="text/css" href="{{('/frontend/css/global.css')}}" />
     </head>
     <body>
-    
+      
     <div class="trang-ch">
+      
       <main class="bg-group">
         <section class="bg1">
+          <div class="container-fluid remove-vid-marg">
+        <div class="vid-parent">
+          <video playsinline autoplay muted loop>
+            <source src="{{ ('/frontend/video/background.mp4') }}" />
+          </video>
+          <div class="vid-overlay"></div>
+        </div>
+    </div> <!-- End Video Background -->
           <header class="navigation1">
             <img class="material-symbolsmenu-rounded-icon1" alt="">
             
@@ -51,52 +60,64 @@
               </div>
             </div>
           </header>
-          <div class="bg-inner">
-            <div class="frame-parent">
-              <div class="frame-wrapper">
-                <div class="frame-group">
-                  <div class="cng-ty-c-phn-dch-v-du-lc-parent">
-                    <h2 class="cng-ty-c2">CÔNG TY CỔ PHẦN DỊCH VỤ DU LỊCH PHÚ THỌ</h2>
-                    <div class="phuthotourist-wrapper">
-                      <b class="phuthotourist2">PHUTHOTOURIST</b>
-                    </div>
-                  </div>
-                  <div class="ngy-thnh-lp-01012019-wrapper">
-                    <i class="ngy-thnh-lp">Ngày thành lập 01/01/2019</i>
+        
+        <div class="bg-inner">
+          <div class="frame-parent">
+            <div class="frame-wrapper">
+              <div class="frame-group">
+                <div class="cng-ty-c-phn-dch-v-du-lc-parent">
+                  <h2 class="cng-ty-c2">CÔNG TY CỔ PHẦN DỊCH VỤ DU LỊCH PHÚ THỌ</h2>
+                  <div class="phuthotourist-wrapper">
+                    <b class="phuthotourist2">PHUTHOTOURIST</b>
                   </div>
                 </div>
-              </div>
-              <div class="component-11">
-                <img class="img-5-icon" loading="lazy" alt="" src="./public/img5@2x.png">
-                
-                <img class="img-4-icon" alt="" src="./public/img4@2x.png">
-                
-                <img class="img-1-icon" alt="" src="./public/img1@2x.png">
-                
-                <div class="img-2">
-                  <img class="img-icon8" alt="" src="./public/img@2x.png">
-                  
-                  <b class="kt-qu-u-container">
-                    <p class="kt-qu-u">Kết quả đấu giá giữ xe tại </p>
-                    <p class="cvvh-m-sen">CVVH Đầm Sen 2022</p>
-                  </b>
+                <div class="ngy-thnh-lp-01012019-wrapper">
+                  <i class="ngy-thnh-lp">Ngày thành lập 01/01/2019</i>
                 </div>
-                <div class="img-3" id="iMG3Container">
-                  <img class="img-icon9" alt="" src="./public/img-11@2x.png">
-                  
-                  <b class="hn-1000-bnh-container">
-                    <p class="hn-1000-bnh">Hơn 1000 bánh chưng lộc</p>
-                    <p class="cho-khch-dng">cho khách dâng hương </p>
-                    <p class="vtng-vua-hng">vtượng vua Hùng tại Đầm Sen</p>
-                  </b>
-                </div>
-              </div>
-              <div class="mdiarrow-up-container">
-                <img class="mdiarrow-up-icon1" loading="lazy" alt="" src="./public/mdiarrowup@2x.png">
-                
               </div>
             </div>
+
+            <div class="component-11">
+              <img class="img-5-icon" loading="lazy" alt="" src="{{ ('/frontend/img/img03.jpeg') }}">
+              
+              <div class="img-2">
+                <img class="img-4-icon" alt="" src="{{ ('/frontend/img/img04.png') }}">
+                
+                <b class="kt-qu-u-container">
+                  <p class="kt-qu-u">Kết quả đấu giá giữ xe tại </p>
+                  <p class="cvvh-m-sen">CVVH Đầm Sen 2022</p>
+                </b>
+              </div>
+              
+              
+              <img class="img-1-icon" alt="" src="{{ ('/frontend/img/img02.jpeg') }}">
+              
+              <div class="img-2">
+                <img class="img-icon8" alt="" src="{{ ('/frontend/img/img01.png') }}">
+                
+                <b class="kt-qu-u-container">
+                  <p class="kt-qu-u">Kết quả đấu giá giữ xe tại </p>
+                  <p class="cvvh-m-sen">CVVH Đầm Sen 2022</p>
+                </b>
+              </div>
+              <div class="img-3" id="iMG3Container">
+                <img class="img-icon9" alt="" src="{{ ('/frontend/img/img05.png') }}">
+                
+                <b class="hn-1000-bnh-container">
+                  <p class="hn-1000-bnh">Hơn 1000 bánh chưng lộc</p>
+                  <p class="cho-khch-dng">cho khách dâng hương </p>
+                  <p class="vtng-vua-hng">vtượng vua Hùng tại Đầm Sen</p>
+                </b>
+              </div>
+            </div>
+            <div class="mdiarrow-up-container">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="24" viewBox="0 0 26 24" fill="none">
+                <path d="M24.5 12L13 22L1.5 12" stroke="#F0F0F0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M24.5 2L13 12L1.5 2" stroke="#F0F0F0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
           </div>
+        </div>
         </section>
         <section class="frame-container">
           <div class="frame-parent1">
