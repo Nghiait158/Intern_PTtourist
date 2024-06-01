@@ -8,16 +8,18 @@
 }
 .vid-parent {
   position: fixed;
-  
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
 }
-.ti-liu6 {
+.ti-liu {
   text-decoration: none;
   position: relative;
   text-transform: uppercase;
   font-weight: 700;
-  color: inherit;
+  color: white;
   display: inline-block;
   min-width: 113px;
   white-space: nowrap;
@@ -42,16 +44,7 @@
   box-sizing: border-box;
   color: var(--color-paleturquoise);
 }
-.ti-liu7 {
-  text-decoration: none;
-  position: relative;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: inherit;
-  display: inline-block;
-  min-width: 79px;
-  white-space: nowrap;
-}
+
 .nav-bar-item3,
 .nav-item-container1 {
   display: flex;
@@ -77,16 +70,7 @@
   padding: var(--padding-9xs);
   cursor: pointer;
 }
-.ti-liu8 {
-  text-decoration: none;
-  position: relative;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: inherit;
-  display: inline-block;
-  min-width: 78px;
-  white-space: nowrap;
-}
+
 .nav-bar-item4,
 .nav-item-container2 {
   display: flex;
@@ -99,16 +83,7 @@
   flex-direction: column;
   padding: var(--padding-3xl) 0 0;
 }
-.ti-liu9 {
-  text-decoration: none;
-  position: relative;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: inherit;
-  display: inline-block;
-  min-width: 127px;
-  white-space: nowrap;
-}
+
 .nav-bar-item5,
 .nav-item-container3,
 .navigation1 {
@@ -116,7 +91,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: var(--padding-6xs) var(--padding-9xs);
+  padding: var(--padding-8xs) var(--padding-10xs);
 }
 .nav-item-container3,
 .navigation1 {
@@ -131,8 +106,8 @@
   flex-direction: row;
   justify-content: center;
   padding: var(--padding-xl) var(--padding-xl) var(--padding-lg)
-    var(--padding-13xl);
-  gap: var(--gap-61xl);
+    var(--padding-10xl);
+  gap: var(--gap-31xl);
   top: -50px;
   z-index: 99;
   position: relative;
@@ -2299,6 +2274,7 @@
 }
 .cng-ty-c10 {
   position: relative;
+  
 }
 .cng-ty-c-phn-dch-v-du-lc-container {
   display: flex;

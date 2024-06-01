@@ -2844,18 +2844,7 @@
   color: var(--white);
   font-family: var(--font-philosopher);
 }
-.ti-liu {
-  width: 100%;
-  position: relative;
-  background-color: var(--white);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-61xl);
-  line-height: normal;
-  letter-spacing: normal;
-}
+
 @media screen and (max-width: 1650px) {
   .footer {
     flex-wrap: wrap;
