@@ -199,7 +199,7 @@
   height: 351.6px;
 }
 .img-1-icon,
-.img-4-icon,
+
 .img-5-icon {
   position: absolute;
   object-fit: contain;
@@ -211,12 +211,14 @@
   height: 471.3px;
   z-index: 1;
 }
+/* .img-4-icon, */
 .img-1-icon {
   top: 89.6px;
   left: 0;
   width: 203.6px;
   height: 352.6px;
 }
+.img-4-icon,
 .img-icon8 {
   height: 472.3px;
   flex: 1;
@@ -337,6 +339,22 @@
   color: var(--white);
   font-family: var(--font-philosopher);
 }
+
+.vector-parent {
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #0056b3; /* Màu chữ */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Màu nền có độ trong suốt */
+  border: 2px solid #fff; /* Đường viền màu trắng */
+  border-radius: 15px;
+  position: relative;
+  
+}
+
+
 .frame-child2 {
   height: 17.2px;
   width: 27px;
@@ -488,15 +506,18 @@
   min-width: 694px;
 }
 .wrapper-rectangle-11-child {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
   position: absolute;
-  left: 0;
-  top: 4px;
-  transform: scale(1.135);
+  width: 487px;
+  height: 311px;
+  gap: 0px;
+  border-radius: 26.71px 0px 0px 0px;
+  border: 5px 0px 0px 0px;
+  opacity: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.wrapper-rectangle-11 {
+/* .wrapper-rectangle-11 {
   position: absolute;
   top: 0;
   left: 0;
@@ -506,18 +527,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 .wrapper-rectangle-12-child {
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  object-fit: contain;
   position: absolute;
-  left: 0;
-  top: 4px;
-  transform: scale(1.124);
+  width: 552px;
+  height: 340px;
+  top: 259px;
+  left: 67px;
+  gap: 0px;
+  border-radius: 26.71px 0px 0px 0px;
+  border: 5px 0px 0px 0px;
+  opacity: 0px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.wrapper-rectangle-12 {
+/* .wrapper-rectangle-12 {
   position: absolute;
   top: 259px;
   left: 67px;
@@ -528,7 +554,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 .image-slider {
   height: 100%;
   width: 100%;

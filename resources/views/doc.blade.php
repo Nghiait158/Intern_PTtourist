@@ -9,19 +9,14 @@
             <div class="main-content">
               <div class="page-content">
                 <div class="vector-parent">
-                  <img
-                    class="frame-child"
-                    loading="lazy"
-                    alt=""
-                    src="./public/polygon-1.svg"
-                  />
+                  
 
                   <h1 class="ti-liu5">Tài liệu</h1>
                 </div>
               </div>
               <div class="document-parent">
                 <div class="document">
-                  <img class="img-icon" alt="" src="./public/img@2x.png" />
+                  <img class="img-icon" alt="" src="{{ ('/frontend/img/img14.jpeg') }}" />
 
                   <div class="content">
                     <div class="document-titles">
@@ -41,7 +36,7 @@
                   </div>
                 </div>
                 <div class="document1">
-                  <img class="img-icon1" alt="" src="./public/img-1@2x.png" />
+                  <img class="img-icon1" alt="" src="{{ ('/frontend/img/img15.jpeg') }}" />
 
                   <div class="content1">
                     <div class="files-wrapper">
@@ -60,7 +55,7 @@
                   </div>
                 </div>
                 <div class="document2">
-                  <img class="img-icon2" alt="" src="./public/img-2@2x.png" />
+                  <img class="img-icon2" alt="" src="{{ ('/frontend/img/img16.jpeg') }}" />
 
                   <div class="content2">
                     <div class="files-container">
@@ -79,7 +74,7 @@
                   </div>
                 </div>
                 <div class="document3">
-                  <img class="img-icon3" alt="" src="./public/img-3@2x.png" />
+                  <img class="img-icon3" alt="" src="{{ ('/frontend/img/img13.jpeg') }}" />
 
                   <div class="content3">
                     <div class="files-frame">
@@ -98,7 +93,7 @@
                   </div>
                 </div>
                 <div class="document4">
-                  <img class="img-icon4" alt="" src="./public/img-4@2x.png" />
+                  <img class="img-icon4" alt="" src="{{ ('/frontend/img/img19.jpeg') }}" />
 
                   <div class="content4">
                     <div class="frame-div">
@@ -117,7 +112,7 @@
                   </div>
                 </div>
                 <div class="document5">
-                  <img class="img-icon5" alt="" src="./public/img-5@2x.png" />
+                  <img class="img-icon5" alt="" src="{{ ('/frontend/img/img20.jpeg') }}" />
 
                   <div class="content5">
                     <div class="files-wrapper1">
@@ -136,7 +131,7 @@
                   </div>
                 </div>
                 <div class="document6">
-                  <img class="img-icon6" alt="" src="./public/img-6@2x.png" />
+                  <img class="img-icon6" alt="" src="{{ ('/frontend/img/img18.jpeg') }}" />
 
                   <div class="content6">
                     <div class="files-wrapper2">
@@ -155,7 +150,7 @@
                   </div>
                 </div>
                 <div class="document7">
-                  <img class="img-icon7" alt="" src="./public/img-7@2x.png" />
+                  <img class="img-icon7" alt="" src="{{ ('/frontend/img/img14.jpeg') }}" />
 
                   <div class="content7">
                     <div class="files-wrapper3">
@@ -199,7 +194,10 @@
                       <div class="date-picker-separators">
                         <div class="date-picker-separator">10/10/2021</div>
                       </div>
-                      <img class="icons" alt="" src="./public/icons.svg" />
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-week" viewBox="0 0 16 16">
+                        <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                      </svg>
                     </div>
                     <img
                       class="vector-icon1"
@@ -211,7 +209,10 @@
                       <div class="wrapper">
                         <div class="div">10/10/2021</div>
                       </div>
-                      <img class="icons1" alt="" src="./public/icons.svg" />
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-week" viewBox="0 0 16 16">
+                        <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                      </svg>
                     </div>
                   </div>
                 </div>
@@ -220,7 +221,9 @@
                   <div class="search">
                     <div class="search1">
                       <div class="search-input">
-                        <img class="icons2" alt="" src="./public/icons-2.svg" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
 
                         <input
                           class="search-input-child"
@@ -228,7 +231,7 @@
                           type="text"
                         />
                       </div>
-                      <img class="icons-search" alt="" />
+                      {{-- <img class="icons-search" alt="" /> --}}
                     </div>
                     <div class="drop">
                       <div class="tm-kim-gn">Tìm kiếm gần đây:</div>
@@ -316,22 +319,22 @@
                   <div class="button11">
                     <b class="tn-ti-liu">Tên tài liệu</b>
                   </div>
-                  <input
-                    class="button12"
-                    placeholder="Khám phá Hội An - Việt Nam"
-                    type="text"
-                  />
+                  <div class="button13">
+                    <p class="hi-phng-yu">
+                      Khám phá Hội An 
+                    </p>
+                  </div>
 
                   <div class="button13">
                     <p class="hi-phng-yu">
                       Hải Phòng yêu cầu người dân không ra khỏi nhà sau 22h
                     </p>
                   </div>
-                  <input
-                    class="button14"
-                    placeholder="Chuẩn bị gì sau khi tiêm vaccin Covid -19?"
-                    type="text"
-                  />
+                  <div class="button13">
+                    <p class="hi-phng-yu">
+                      Hải Phòng yêu cầu người dân không ra khỏi nhà sau 22h
+                    </p>
+                  </div>
 
                   <input
                     class="button15"
@@ -478,7 +481,10 @@
                     <b class="ti-ti-liu">Tải tài liệu</b>
                   </button>
                   <div class="button45">
-                    <input class="icons8" type="checkbox" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                      <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                      <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                    </svg>
                   </div>
                   <div class="button46">
                     <input class="icons9" type="checkbox" />

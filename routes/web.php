@@ -4,6 +4,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DocController;
+use App\Http\Controllers\PostsController;
+
 Route::get('/wel', function () {
     return view('welcome');
 });
@@ -17,6 +19,7 @@ Route::get('/wel', function () {
 // Route::get('/main', [HomeController::class, 'index']);
 Route::get('/main', [HomeController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/posts', [PostsController::class, 'index']);
 
 
 Route::get('/doc', [DocController::class, 'index']);

@@ -20,7 +20,7 @@
             <div class="component-11">
               <img class="img-5-icon" loading="lazy" alt="" src="{{ ('/frontend/img/img03.jpeg') }}">
               
-              <div class="img-2">
+              <div class="img-1">
                 <img class="img-4-icon" alt="" src="{{ ('/frontend/img/img04.png') }}">
                 
                 <b class="kt-qu-u-container">
@@ -33,16 +33,15 @@
               <img class="img-1-icon" alt="" src="{{ ('/frontend/img/img02.jpeg') }}">
               
               <div class="img-2">
-                <img class="img-icon8" alt="" src="{{ ('/frontend/img/img01.png') }}">
-                
+                <img href="/doc" class="img-icon8" alt="" src="{{ ('/frontend/img/img01.png') }}">
                 <b class="kt-qu-u-container">
                   <p class="kt-qu-u">Kết quả đấu giá giữ xe tại </p>
                   <p class="cvvh-m-sen">CVVH Đầm Sen 2022</p>
                 </b>
               </div>
+
               <div class="img-3" id="iMG3Container">
                 <img class="img-icon9" alt="" src="{{ ('/frontend/img/img05.png') }}">
-                
                 <b class="hn-1000-bnh-container">
                   <p class="hn-1000-bnh">Hơn 1000 bánh chưng lộc</p>
                   <p class="cho-khch-dng">cho khách dâng hương </p>
@@ -78,21 +77,21 @@
                     </div>
                   </div>
                   <div class="feedback-icon-parent">
-                    <img class="feedback-icon" loading="lazy" alt="" src="./public/vector-11.svg">
+                    <img class="feedback-icon" loading="lazy" alt="" src="{{ ('/frontend/img/img04.png') }}">
                     
                     <div class="feedback-button-container">
                       <div class="cng-ty-c-phn-dch-v-du-lc-wrapper">
                         <p class="cng-ty-c-container">
                           <span class="cng-ty-c3">Công ty Cổ phần Dịch vụ Du lịch Phú Thọ (Phuthotourist), là một đơn vị thành viên của Saigontourist. Phuthotourist được biết đến với các sản phẩm du lịch nổi tiếng tại TP.HCM (Quận 11) như:</span>
                           <ul class="cng-vin-vn-ha-m-sen-khu">
-                            <li class="cng-vin-vn">Công viên Văn hóa Đầm Sen</li>
+                                <li class="cng-vin-vn">Công viên Văn hóa Đầm Sen</li>
                                 <li class="khu-du-lch">Khu du lịch sinh thái Vàm Sát</li>
-                                    <li class="khch-sn-ngc">Khách sạn Ngọc Lan</li>
-                                        <li class="khch-sn-ph">Khách sạn Phú Thọ</li>
-                                            <li class="trung-tm-chm">Trung tâm chăm sóc sức khỏe & giải trí Đầm Sen (Damsen Plaza)</li>
-                                                <li class="nh-hng-thy">Nhà hàng Thủy Tạ Đầm Sen</li>
-                                                    <li class="c-ph-vn">Cà phê Vườn Đá</li>
-                                                        <li class="trung-tm-dch">Trung tâm Dịch vụ Du lịch Đầm Sen (Damsen Travel)</li>
+                                <li class="khch-sn-ngc">Khách sạn Ngọc Lan</li>
+                                <li class="khch-sn-ph">Khách sạn Phú Thọ</li>
+                                <li class="trung-tm-chm">Trung tâm chăm sóc sức khỏe & giải trí Đầm Sen (Damsen Plaza)</li>
+                                <li class="nh-hng-thy">Nhà hàng Thủy Tạ Đầm Sen</li>
+                                <li class="c-ph-vn">Cà phê Vườn Đá</li>
+                                <li class="trung-tm-dch">Trung tâm Dịch vụ Du lịch Đầm Sen (Damsen Travel)</li>
                                                             <li >Liên kết với Công viên nước Đầm Sen (Đầm Sen Water Park).</li>
                           </ul>
                         </p>
@@ -107,11 +106,11 @@
               <div class="image-slider-wrapper">
                 <div class="image-slider">
                   <div class="wrapper-rectangle-11">
-                    <img class="wrapper-rectangle-11-child" alt="" src="./public/rectangle-11@2x.png">
+                    <img class="wrapper-rectangle-11-child" alt="" src="{{ ('/frontend/img/img04.png') }}">
                     
                   </div>
                   <div class="wrapper-rectangle-12">
-                    <img class="wrapper-rectangle-12-child" loading="lazy" alt="" src="./public/rectangle-12@2x.png">
+                    <img class="wrapper-rectangle-12-child" loading="lazy" alt="" src="{{ ('/frontend/img/img6.png') }}">
                     
                   </div>
                 </div>
@@ -119,8 +118,11 @@
             </div>
             <div class="logo-ngang-parent">
               <div class="logo-ngang3" id="logoNgangContainer">
-                <img class="logo-ngang-item" alt="" src="./public/frame-8-11.svg">
-                
+                <svg xmlns="http://www.w3.org/2000/svg" width="115" height="73" viewBox="0 0 115 73" fill="none">
+                  <path d="M93.9478 36.096C93.9478 56.0312 77.7871 72.1919 57.8518 72.1919C37.9166 72.1919 21.7559 56.0312 21.7559 36.096C21.7559 16.1607 37.9166 0 57.8518 0C77.7871 0 93.9478 16.1607 93.9478 36.096Z" fill="#0054A6"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M57.8518 70.5697C76.8911 70.5697 92.3255 55.1353 92.3255 36.096C92.3255 17.0567 76.8911 1.62229 57.8518 1.62229C38.8125 1.62229 23.3782 17.0567 23.3782 36.096C23.3782 55.1353 38.8125 70.5697 57.8518 70.5697ZM57.8518 72.1919C77.7871 72.1919 93.9478 56.0312 93.9478 36.096C93.9478 16.1607 77.7871 0 57.8518 0C37.9166 0 21.7559 16.1607 21.7559 36.096C21.7559 56.0312 37.9166 72.1919 57.8518 72.1919Z" fill="white"/>
+                  <path d="M41.608 24.3649L1 46.0225L35.7424 35.1937L73.1919 48.2785L114.251 26.6209L79.0575 37.9009L41.608 24.3649Z" fill="white" stroke="#0054A6" stroke-width="0.811145" stroke-linejoin="round"/>
+                </svg>
               </div>
               <div class="frame-wrapper2">
                 <div class="frame-parent4">
@@ -137,10 +139,11 @@
                   <p class="hy-cng-chng">Hãy cùng chúng tôi chia sẻ những bài viết mới với các thông tin về những sản phẩm du lịch</p>
                 </div>
               </div>
+
               <div class="news-card-container">
                 <div class="news-card-landing-page">
                   <div class="img">
-                    <img class="img-icon10" alt="" src="./public/img-21@2x.png">
+                    <img class="img-icon10" alt="" src="{{ ('/frontend/img/img07.png') }}">
                     
                     <div class="img-child">
                     </div>
@@ -190,7 +193,7 @@
                 </div>
                 <div class="news-card-landing-page1">
                   <div class="img1">
-                    <img class="img-icon11" alt="" src="./public/img-31@2x.png">
+                    <img class="img-icon11" alt="" src="{{ ('/frontend/img/img08.png') }}">
                     
                     <div class="img-item">
                     </div>
@@ -243,7 +246,7 @@
                 </div>
                 <div class="news-card-landing-page2">
                   <div class="img2">
-                    <img class="img-icon12" alt="" src="./public/img-21@2x.png">
+                    <img class="img-icon12" alt="" src="{{ ('/frontend/img/img07.png') }}">
                     
                     <div class="img-inner">
                     </div>
@@ -317,7 +320,7 @@
               <div class="activities-grid">
                 <div class="news-card-landing-page3">
                   <div class="img3">
-                    <img class="img-icon13" alt="" src="./public/img-51@2x.png">
+                    <img class="img-icon13" alt="" src="{{ ('/frontend/img/img11.png') }}">
                     
                     <div class="img-child1">
                     </div>
@@ -365,7 +368,7 @@
                 </div>
                 <div class="news-card-landing-page4">
                   <div class="img4">
-                    <img class="img-icon14" alt="" src="./public/img-51@2x.png">
+                    <img class="img-icon14" alt="" src="{{ ('/frontend/img/img10.png') }}">
                     
                     <div class="img-child2">
                     </div>
@@ -413,7 +416,7 @@
                 </div>
                 <div class="news-card-landing-page5">
                   <div class="img5">
-                    <img class="img-icon15" alt="" src="./public/img-51@2x.png">
+                    <img class="img-icon15" alt="" src="{{ ('/frontend/img/img09.png') }}">
                     
                     <div class="img-child3">
                     </div>

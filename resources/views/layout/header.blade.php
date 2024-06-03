@@ -15,7 +15,9 @@
 <link rel="stylesheet" type="text/css" href="{{('/frontend/css/global.css')}}" />
 <link rel="stylesheet" type="text/css" href="{{('/frontend/css/tailieu.css')}}" />
       <style>
-      
+      body {
+            zoom: 80%; 
+        }
         
       </style>
     </head>
