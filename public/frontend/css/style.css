@@ -353,7 +353,14 @@
   position: relative;
   
 }
-
+.icon {
+  left: 1134px;
+  width: 1134px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  height: 386px;
+}
 
 .frame-child2 {
   height: 17.2px;
@@ -555,6 +562,19 @@
   align-items: center;
   justify-content: center;
 } */
+.sliders {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  box-shadow: var(--shadow-bai-moi);
+  backdrop-filter: blur(15px);
+  border-radius: var(--br-xs);
+  width: 1134px;
+  height: 604px;
+  overflow: hidden;
+  font-size: var(--font-size-19xl);
+  color: var(--blue-primary-500);
+}
 .image-slider {
   height: 100%;
   width: 100%;

@@ -14,6 +14,8 @@
 <link rel="stylesheet" type="text/css" href="{{('/frontend/css/style.css')}}" />
 <link rel="stylesheet" type="text/css" href="{{('/frontend/css/global.css')}}" />
 <link rel="stylesheet" type="text/css" href="{{('/frontend/css/tailieu.css')}}" />
+{{-- <link rel="stylesheet" type="text/css" href="{{('/frontend/css/styleguides.css')}}" /> --}}
+
       <style>
       body {
             zoom: 80%; 
@@ -212,8 +214,15 @@
               </div>
             </div>
           </div>
+          <a
+              href="{{ route('login') }}"
+              class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                Admin Log in
+          </a>
+
         </div>
         <div class="footer-item">
+          
         </div>
       </footer>
     </div>

@@ -9,7 +9,9 @@ use App\Http\Controllers\PostsController;
 Route::get('/wel', function () {
     return view('welcome');
 });
-
+Route::get('/posts2', function () {
+    return view('posts2');
+});
 
 
 
@@ -26,9 +28,9 @@ Route::get('/doc', [DocController::class, 'index']);
 
 
 // Route::get('/home', 'HomeController@index');
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/admin_layout', function () {
+    return view('admin/admin_layout');
+})->middleware(['auth', 'verified'])->name('admin_layout');
 
 
 
