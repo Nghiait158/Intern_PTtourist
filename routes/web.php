@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DocController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\AdminManage;
 
 Route::get('/wel', function () {
     return view('welcome');
@@ -21,16 +22,21 @@ Route::get('/posts2', function () {
 // Route::get('/main', [HomeController::class, 'index']);
 Route::get('/main', [HomeController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/posts', [PostsController::class, 'index']);
 
+// Bài viết 
+Route::get('/managePosts', [PostsController::class, 'managePosts']);
+Route::get('/addPosts', [PostsController::class, 'addPosts']);
+Route::post('/savePosts', [PostsController::class, 'savePosts']);
 
+// tài liệu
 Route::get('/doc', [DocController::class, 'index']);
 
-
+// Route::get('/adminContent', 'AdminManage@showAdminContent');
+Route::get('/adminContent', [AdminManage::class, 'showAdminContent']);
 // Route::get('/home', 'HomeController@index');
 Route::get('/admin_layout', function () {
-    return view('admin/admin_layout');
-})->middleware(['auth', 'verified'])->name('admin_layout');
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 
 

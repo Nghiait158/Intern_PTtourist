@@ -10,4 +10,5 @@ class AdminLoginController extends Controller
     public function index(){
         return view('admin.login');
     }
+    
 }
