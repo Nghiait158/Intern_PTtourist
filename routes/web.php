@@ -17,23 +17,33 @@ Route::get('/posts2', function () {
 
 
 
-// BackEnd
+// ---------------------------BackEnd---------------------------
 
 // Route::get('/main', [HomeController::class, 'index']);
 Route::get('/main', [HomeController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
 
-// Bài viết 
+//--------------------------- Bài viết ---------------------------
 Route::get('/managePosts', [PostsController::class, 'managePosts']);
 Route::get('/addPosts', [PostsController::class, 'addPosts']);
+Route::get('/editPosts/{postID}', [PostsController::class, 'editPosts']);
+Route::get('/deletePosts', [PostsController::class, 'deletePosts']);
 Route::post('/savePosts', [PostsController::class, 'savePosts']);
+Route::get('/form', [PostsController::class, 'showForm']);
+Route::post('/form', [PostsController::class, 'submitForm']);
 
-// tài liệu
+//--------------------------- tài liệu---------------------------
 Route::get('/doc', [DocController::class, 'index']);
 
-// Route::get('/adminContent', 'AdminManage@showAdminContent');
+
+
+// ---------------------------------------------------
 Route::get('/adminContent', [AdminManage::class, 'showAdminContent']);
 // Route::get('/home', 'HomeController@index');
+
+
+
+// ---------------------------login------------------------
 Route::get('/admin_layout', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

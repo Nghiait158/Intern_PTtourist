@@ -5,7 +5,7 @@
     <div class="col-lg-12">
             <section class="panel">
                 <header class="panel-heading">
-                    Thêm bài viết vào cơ sở dữ liệu  
+                    Cập nhật bài viết vào cơ sở dữ liệu  
                 </header>
                  <?php
                     $message = Session::get('message');
@@ -15,13 +15,14 @@
                     }
                     ?>
                 <div class="panel-body">
+                    @foreach($editPosts as $key-> $edit_value)
 
                     <div class="position-center">
-                        <form role="form" action="{{URL::to('/savePosts')}}" method="post">
+                        <form role="form" action="{{URL::to('/updatePosts')}}" method="post">
                             {{ csrf_field() }}
                         <div class="form-group">
                             <label for="title">Tên bài viết(title)</label>
-                            <input type="text"  class="form-control"  onkeyup="ChangeToSlug();" name="title"  id="title" placeholder="Tên Bài viết " >
+                            <input type="text" value="{{ $edit_value -> title }}"  class="form-control"  onkeyup="ChangeToSlug();" name="title"  id="title" placeholder="Tên Bài viết " >
                         </div>
                         <div class="form-group">
                             <label for="author">Tác giả(author)</label>
@@ -43,28 +44,16 @@
                             </select>
                             {{-- <input type="text" name="categoryID" class="form-control" id="categoryID" placeholder="Tác Giả"> --}}
                         </div>
-                        {{-- <div class="form-group">
-                            <label for="tag">Từ khóa(tag)</label>
-                            <input type="text" name="tag" class="form-control" id="tag" placeholder="tag">
-                        </div> --}}
                         <div class="form-group">
                             <label for="imgID">Image </label>
                             <input type="text" name="imgID" class="form-control" id="tag" placeholder="Image Name">
                         </div>
-
-                        {{-- <div class="form-group">
-                            <label for="exampleInputPassword1">Image Name</label>
-                              <select name="imgID" class="form-control input-sm m-bot15">
-                                    <option value="0"></option>
-                                    <option value="1">Ẩn</option>
-                                    
-                            </select>
-                        </div> --}}
+                        
                        
-                        <button type="submit" name="addPosts" class="btn btn-info">Thêm bài viết </button>
+                        <button type="submit" name="updatePosts" class="btn btn-info">cập nhật bài viết </button>
                         </form>
                     </div>
-
+                    @endforeach
                 </div>
             </section>
 </div>    
