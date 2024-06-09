@@ -15,38 +15,37 @@
                     }
                     ?>
                 <div class="panel-body">
-                    @foreach($editPosts as $key-> $edit_value)
+                    @foreach($editPosts as $key => $edit_value)
 
                     <div class="position-center">
-                        <form role="form" action="{{URL::to('/updatePosts')}}" method="post">
+                        <form role="form" action="{{URL::to('/updatePosts/'.$edit_value-> postID)}}" method="post">
                             {{ csrf_field() }}
                         <div class="form-group">
                             <label for="title">Tên bài viết(title)</label>
-                            <input type="text" value="{{ $edit_value -> title }}"  class="form-control"  onkeyup="ChangeToSlug();" name="title"  id="title" placeholder="Tên Bài viết " >
+                            <input type="text" value="{{ $edit_value -> title }}"  class="form-control" name="title"  id="title">
                         </div>
                         <div class="form-group">
                             <label for="author">Tác giả(author)</label>
-                            <input type="text" name="author" class="form-control" id="author" placeholder="Tác Giả">
+                            <input type="text" name="author" class="form-control" id="author" value="{{ $edit_value -> author }}">
                         </div>
                         <div class="form-group">
                             <label for="content">Nội dung bài viết(content)</label>
-                            <textarea style="resize: none" rows="8" class="form-control" name="content" id="content" placeholder="Mô tả bài viết"></textarea>
+                            <textarea style="resize: none" rows="8" class="form-control" name="content" id="content"value="{{ $edit_value -> content }}" ></textarea>
                         </div>
                         <div class="form-group">
                             @csrf
                         
                             <label for="categoryID">Thể loại(categoryID)</label>
-                            <select class="form-control" name="categoryID">
+                            {{-- <select class="form-control" name="categoryID">
                                 @foreach($allCategories as $key =>$category)
-                                {{-- @foreach($managePosts as $key =>$post) --}}
                                  <option value="{{ $category->categoryID }}">{{ $category->name }}</option>
                                 @endforeach
-                            </select>
-                            {{-- <input type="text" name="categoryID" class="form-control" id="categoryID" placeholder="Tác Giả"> --}}
+                            </select> --}}
+                            <input type="text" name="categoryID" class="form-control" id="categoryID"  value="{{ $edit_value -> categoryID }}" placeholder="Tác Giả">
                         </div>
                         <div class="form-group">
                             <label for="imgID">Image </label>
-                            <input type="text" name="imgID" class="form-control" id="tag" placeholder="Image Name">
+                            <input type="text" name="imgID" class="form-control" id="tag" value="{{ $edit_value -> imgID }}">
                         </div>
                         
                        

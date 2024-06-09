@@ -27,10 +27,14 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/managePosts', [PostsController::class, 'managePosts']);
 Route::get('/addPosts', [PostsController::class, 'addPosts']);
 Route::get('/editPosts/{postID}', [PostsController::class, 'editPosts']);
-Route::get('/deletePosts', [PostsController::class, 'deletePosts']);
+// Route::get('/editPosts/{postID}', [PostsController::class, 'showPostInEdit']);
+Route::get('/showCategory/{postID}', [PostsController::class, 'showCategory']);
+
+Route::post('/updatePosts/{postID}', [PostsController::class, 'updatePosts']);
+Route::get('/deletePosts/{postID}', [PostsController::class, 'deletePosts']);
 Route::post('/savePosts', [PostsController::class, 'savePosts']);
-Route::get('/form', [PostsController::class, 'showForm']);
-Route::post('/form', [PostsController::class, 'submitForm']);
+// Route::get('/form', [PostsController::class, 'showForm']);
+// Route::post('/form', [PostsController::class, 'submitForm']);
 
 //--------------------------- tài liệu---------------------------
 Route::get('/doc', [DocController::class, 'index']);

@@ -60,7 +60,7 @@
             <td>
               <a href="{{ URL::to('/editPosts/'.$post->postID) }}" class="active styling-edit" ui-toggle-class="">
                 <i class="fa fa-pencil-square-o text-success text-active"></i></a>
-              <a onclick="return confirm('Bạn có chắc là muốn xóa danh mục này ko?')" href="{{ URL::to('/deletePosts/'.$post->postID) }}" class="active styling-edit" ui-toggle-class="">
+              <a onclick="return confirm('Bạn có chắc là muốn xóa bài viết này ko?')" href="{{ URL::to('/deletePosts/'.$post->postID) }}" class="active styling-edit" ui-toggle-class="">
                 <i class="fa fa-times text-danger text"></i>
               </a>
             </td>
@@ -69,19 +69,19 @@
         </tbody>
       </table>
       <!-----import data---->
-      <form action="{{url('import-csv')}}" method="POST" enctype="multipart/form-data">
+      {{-- <form action="{{url('import-csv')}}" method="POST" enctype="multipart/form-data">
           @csrf
           
         <input type="file" name="file" accept=".xlsx"><br>
 
        <input type="submit" value="Import file Excel" name="import_csv" class="btn btn-warning">
-      </form>
+      </form> --}}
 
     <!-----export data---->
-       <form action="{{url('export-csv')}}" method="POST">
+       {{-- <form action="{{url('export-csv')}}" method="POST">
           @csrf
        <input type="submit" value="Export file Excel" name="export_csv" class="btn btn-success">
-      </form>
+      </form> --}}
 
 
     </div>

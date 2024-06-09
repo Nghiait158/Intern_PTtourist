@@ -112,7 +112,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span>Posts</span>
                     </a>
                     <ul class="sub">
-						<li><a href="{{URL::to('/posts')}}">Quản lý Bài Viết</a></li>
+						<li><a href="{{URL::to('/managePosts')}}">Quản lý Bài Viết</a></li>
 						
                       
                     </ul>
@@ -165,7 +165,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="{{('/backend/ckeditor/ckeditor.js')}}"></script>
 <script src="{{('/backend/js/jquery.form-validator.min.js')}}"></script>
 <script src="{{('/backend/js/jquery.dataTables.min.js')}}"></script>
-<script type="text/javascript">
+{{-- <script type="text/javascript">
  
     function ChangeToSlug()
         {
@@ -202,8 +202,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
    
    
-</script>
-<script type="text/javascript">
+</script> --}}
+{{-- <script type="text/javascript">
     $('.update_quantity_order').click(function(){
         var order_product_id = $(this).data('product_id');
         var order_qty = $('.order_qty_'+order_product_id).val();
@@ -232,8 +232,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
 
     });
-</script>
-<script type="text/javascript">
+</script> --}}
+{{-- <script type="text/javascript">
     $('.order_details').change(function(){
         var order_status = $(this).val();
         var order_id = $(this).children(":selected").attr("id");
@@ -279,8 +279,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         }
 
     });
-</script>
-<script type="text/javascript">
+</script> --}}
+{{-- <script type="text/javascript">
     $(document).ready(function(){
 
         fetch_delivery();
@@ -361,7 +361,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     })
 
 
-</script>
+</script> --}}
 <script type="text/javascript">
     $(document).ready( function () {
     $('#myTable').DataTable();

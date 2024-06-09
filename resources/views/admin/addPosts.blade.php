@@ -37,7 +37,6 @@
                             <label for="categoryID">Thể loại(categoryID)</label>
                             <select class="form-control" name="categoryID">
                                 @foreach($allCategories as $key =>$category)
-                                {{-- @foreach($managePosts as $key =>$post) --}}
                                  <option value="{{ $category->categoryID }}">{{ $category->name }}</option>
                                 @endforeach
                             </select>
