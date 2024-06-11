@@ -88,33 +88,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
                 <li>
-                    <a class="active" href="{{URL::to('/admin_layout')}}">
+                    <a class="active" href="{{URL::to('/adminContent')}}">
                         <i class="fa fa-dashboard"></i>
                         <span>Tổng quan</span>
                     </a>
                 </li>
                  
-                {{-- <li class="sub-menu">
+                <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>
-                        <span>Slider</span>
+                        <span>Admin</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{URL::to('/manage-slider')}}">Liệt kê slider</a></li>
-                        <li><a href="{{URL::to('/add-slider')}}">Thêm slider</a></li>
+                        {{-- <li><a href="{{URL::to('/manage-slider')}}">Profile</a></li> --}}
+                        <li><a href="{{URL::to('/editProfile')}}">Chỉnh sửa Admin</a></li>
                     </ul>
-                </li> --}}
+                </li>
                    
                 </li>
                  <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>
-                        <span>Posts</span>
+                        <span>Bài Viết</span>
                     </a>
                     <ul class="sub">
 						<li><a href="{{URL::to('/managePosts')}}">Quản lý Bài Viết</a></li>
-						
-                      
+						<li><a href="{{URL::to('/addPosts')}}">Thêm Bài Viết</a></li>
+						<li><a href="{{URL::to('/manageCategories')}}">Danh sách thể loại</a></li>
+						<li><a href="{{URL::to('/addCategories')}}">Thêm thể loại</a></li>    
                     </ul>
                 </li>
                  <li class="sub-menu">

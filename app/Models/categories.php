@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class posts extends Model
+class categories extends Model
 {
     public $timestamps=false;
 
     protected $fillable=[
-        'title','content','imgID','categoryID','author'
+        'name','description'
     ];
 
-    protected $primaryKey='postID';
-    protected $table='posts';
+    protected $primaryKey='categoryID';
+    protected $table='categories';
 }

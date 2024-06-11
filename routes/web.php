@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DocController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\AdminManage;
+use App\Http\Controllers\CategoriesController;
+use App\Models\categories;
 
 Route::get('/wel', function () {
     return view('welcome');
@@ -26,18 +28,28 @@ Route::get('/', [HomeController::class, 'index']);
 //--------------------------- Bài viết ---------------------------
 Route::get('/managePosts', [PostsController::class, 'managePosts']);
 Route::get('/addPosts', [PostsController::class, 'addPosts']);
-Route::get('/editPosts/{postID}', [PostsController::class, 'editPosts']);
+Route::get('/editPosts/{postID}', [PostsController::class, 'editPosts','showCategory']);
 // Route::get('/editPosts/{postID}', [PostsController::class, 'showPostInEdit']);
-Route::get('/showCategory/{postID}', [PostsController::class, 'showCategory']);
+// Route::get('/showCategory/{postID}', [PostsController::class, 'showCategory']);
 
 Route::post('/updatePosts/{postID}', [PostsController::class, 'updatePosts']);
 Route::get('/deletePosts/{postID}', [PostsController::class, 'deletePosts']);
 Route::post('/savePosts', [PostsController::class, 'savePosts']);
 // Route::get('/form', [PostsController::class, 'showForm']);
 // Route::post('/form', [PostsController::class, 'submitForm']);
-
+Route::get('/searchPosts', [PostsController::class, 'search'])->name('posts.search');
 //--------------------------- tài liệu---------------------------
 Route::get('/doc', [DocController::class, 'index']);
+
+
+// ----------------------------thể loại -------------------------------
+Route::get('/manageCategories', [CategoriesController::class, 'manageCategories']);
+Route::get('/addCategories', [CategoriesController::class, 'addCategories']);
+Route::get('/editCategories/{categoryID}', [CategoriesController::class, 'editCategories']);
+Route::post('/updateCategories/{categoryID}', [CategoriesController::class, 'updateCategories']);
+Route::get('/deleteCategories/{categoryID}', [CategoriesController::class, 'deleteCategories']);
+Route::post('/saveCategories', [CategoriesController::class, 'saveCategories']);
+
 
 
 
