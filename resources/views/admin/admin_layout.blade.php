@@ -114,7 +114,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <ul class="sub">
 						<li><a href="{{URL::to('/managePosts')}}">Quản lý Bài Viết</a></li>
 						<li><a href="{{URL::to('/addPosts')}}">Thêm Bài Viết</a></li>
-						<li><a href="{{URL::to('/manageCategories')}}">Danh sách thể loại</a></li>
+						{{-- <li><a href="{{URL::to('/manageCategories')}}">Danh sách thể loại</a></li> --}}
 						<li><a href="{{URL::to('/addCategories')}}">Thêm thể loại</a></li>    
                     </ul>
                 </li>
@@ -125,7 +125,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </a>
                     <ul class="sub">
                         <li><a href="{{URL::to('/job_manage')}}">Quản Lí Tuyển Dụng</a></li>
+                        <li><a href="{{URL::to('/add_recruitments')}}">Thêm Bài Viết Tuyển Dụng</a></li>
+                        
                         <li><a href="{{URL::to('/employee')}}">Nhân Viên</a></li>
+
+                        {{-- <li><a href="{{URL::to('/employee')}}">Nhân Viên</a></li> --}}
+                        
                     </ul>
                 </li>
                  <li class="sub-menu">
@@ -134,7 +139,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span>Frontend</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{URL::to('/img_manage')}}">Quản lý Hình ảnh Page</a></li>
+                        <li><a href="{{URL::to('/manageImgPage')}}">Quản lý Hình ảnh Page</a></li>
                         
                         
                       

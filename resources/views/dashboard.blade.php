@@ -122,7 +122,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <ul class="sub">
 						<li><a href="{{URL::to('/managePosts')}}">Quản lý Bài Viết</a></li>
 						<li><a href="{{URL::to('/addPosts')}}">Thêm Bài Viết</a></li>
-						
+						{{-- <li><a href="{{URL::to('/manageCategories')}}">Danh sách thể loại</a></li> --}}
+						<li><a href="{{URL::to('/addCategories')}}">Thêm thể loại</a></li>    
                       
                     </ul>
                 </li>
@@ -142,7 +143,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span>Frontend</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="{{URL::to('/img_manage')}}">Quản lý Hình ảnh Page</a></li>
+                        <li><a href="{{URL::to('/manageImgPage')}}">Quản lý Hình ảnh Page</a></li>
                         
                         
                       

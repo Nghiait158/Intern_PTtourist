@@ -7,6 +7,7 @@ use App\Http\Controllers\DocController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\AdminManage;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\recruitmentController;
 use App\Models\categories;
 
 Route::get('/wel', function () {
@@ -40,6 +41,25 @@ Route::post('/savePosts', [PostsController::class, 'savePosts']);
 Route::get('/searchPosts', [PostsController::class, 'search'])->name('posts.search');
 //--------------------------- tài liệu---------------------------
 Route::get('/doc', [DocController::class, 'index']);
+
+
+
+// ---------------------------tuyển dụng -------------------------------
+Route::get('/job_manage', [recruitmentController::class, 'job_manage']);
+Route::get('/add_recruitments', [recruitmentController::class, 'add_recruitments']);
+Route::post('/saveRecruitment', [recruitmentController::class, 'saveRecruitment']);
+
+
+
+
+// -------------------------Hình ảnh------------------------------
+
+Route::get('/manageImgPage', [AdminManage::class, 'index']);
+Route::post('/upload-video', [AdminManage::class, 'uploadVideo']);
+
+
+
+
 
 
 // ----------------------------thể loại -------------------------------
