@@ -12,7 +12,7 @@
                   </div>
                 </div>
                 <div class="ngy-thnh-lp-01012019-wrapper">
-                  <i class="ngy-thnh-lp">Ngày thành lập 01/01/2019</i>
+                  <i class="ngy-thnh-lp">Ngày thành lập 01/01/2020</i>
                 </div>
               </div>
             </div>
