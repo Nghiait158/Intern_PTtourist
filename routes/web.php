@@ -53,9 +53,10 @@ Route::post('/saveRecruitment', [recruitmentController::class, 'saveRecruitment'
 
 
 // -------------------------Hình ảnh------------------------------
-
-Route::get('/manageImgPage', [AdminManage::class, 'index']);
-Route::post('/upload-video', [AdminManage::class, 'uploadVideo']);
+Route::get('/add_ImgPage', [AdminManage::class, 'addImgPage']);
+Route::get('/manageImgPage', [AdminManage::class, 'manageImgPage']);
+Route::post('/UploadMethod', [AdminManage::class, 'UploadMethod']);
+Route::post('/saveImgPage', [AdminManage::class, 'saveImgPage']);
 
 
 

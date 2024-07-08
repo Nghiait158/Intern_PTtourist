@@ -144,6 +144,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </a>
                     <ul class="sub">
                         <li><a href="{{URL::to('/manageImgPage')}}">Quản lý Hình ảnh Page</a></li>
+                        <li><a href="{{URL::to('/add_ImgPage')}}">Thêm Hình ảnh/Video Page</a></li>
                         
                         
                       

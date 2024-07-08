@@ -3,7 +3,7 @@
     <div class="table-agile-info">
   <div class="panel panel-default">
     <div class="panel-heading">
-        Thay đổi Video Background
+        Quản lí hình ảnh, Video Background Page
     </div>
     <div class="table-responsive">
                       <?php
@@ -13,40 +13,39 @@
                                 Session::put('message',null);
                             }
                         ?>
-      <h1>Thay đổi Video Background</h1>
-
       @if (session('success'))
           <p style="color: green;">{{ session('success') }}</p>
       @endif
   
-      <form action="{{ URL::to('/uploadVideo') }}" method="POST" enctype="multipart/form-data">
-          @csrf
-          <label for="video">Chọn video mới:</label>
-          <input type="file" name="video" accept="video/mp4" required>
-          <button type="submit">Upload Video</button>
-      </form>
-  
-      @if ($video)
-          <h2>Video hiện tại:</h2>
-          <video width="320" height="240" controls>
-              <source src="{{ Storage::url($video->imgPath) }}" type="video/mp4">
-              Trình duyệt của bạn không hỗ trợ video tag.
-          </video>
-      @endif
-      <!-----import data---->
-      {{-- <form action="{{url('import-csv')}}" method="POST" enctype="multipart/form-data">
-          @csrf
-          
-        <input type="file" name="file" accept=".xlsx"><br>
-
-       <input type="submit" value="Import file Excel" name="import_csv" class="btn btn-warning">
-      </form> --}}
-
-    <!-----export data---->
-       {{-- <form action="{{url('export-csv')}}" method="POST">
-          @csrf
-       <input type="submit" value="Export file Excel" name="export_csv" class="btn btn-success">
-      </form> --}}
+      <table class="table table-striped b-t b-light">
+        <thead>
+          <tr>
+            <th style="width:20px;">
+              
+            </th>
+            {{-- <th></th> --}}
+            <th>Mô tả hình ảnh/Video</th>
+            <th>Đường dẫn</th>
+            <th style="width:30px;"></th>
+          </tr>
+        </thead>
+        <tbody>
+            @foreach($managerImgPage as $key =>$imgPage)
+          <tr>
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="imgPage[]"><i></i></label></td>
+            <td>{{ $imgPage -> description }}</td>
+            <td><span class="text-ellipsis">{{ $imgPage -> imgPath }}</span></td>
+            <td>
+              {{-- <a href="{{ URL::to('/editPosts/'.$post->postID) }}" class="active styling-edit" ui-toggle-class=""> --}}
+                <i class="fa fa-pencil-square-o text-success text-active"></i></a>
+              {{-- <a onclick="return confirm('Bạn có chắc là muốn xóa bài viết này ko?')" href="{{ URL::to('/deletePosts/'.$post->postID) }}" class="active styling-edit" ui-toggle-class=""> --}}
+                <i class="fa fa-times text-danger text"></i>
+              </a>
+            </td>
+          </tr>
+          @endforeach
+        </tbody>
+      </table>
 
 
     </div>
