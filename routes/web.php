@@ -55,9 +55,9 @@ Route::post('/saveRecruitment', [recruitmentController::class, 'saveRecruitment'
 // -------------------------Hình ảnh------------------------------
 Route::get('/add_ImgPage', [AdminManage::class, 'addImgPage']);
 Route::get('/manageImgPage', [AdminManage::class, 'manageImgPage']);
-Route::post('/UploadMethod', [AdminManage::class, 'UploadMethod']);
+Route::get('/', [AdminManage::class, 'UploadMethod']);
 Route::post('/saveImgPage', [AdminManage::class, 'saveImgPage']);
-
+Route::get('/deleteImgPage/{imgID}', [AdminManage::class, 'deleteImgPage']);
 
 
 

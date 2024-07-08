@@ -16,21 +16,10 @@ class AdminManage extends Controller
 
 
     public function manageImgPage(){
-        $manageImgPage=imgmainpage::all();
+        $manageImgPage = imgmainpage::orderBy('imgID', 'desc')->get();
         $allImgPage= view('admin.manageImgPage')->with('manageImgPage', $manageImgPage);
         return view('admin.admin_layout')->with('admin.manageImgPage',$allImgPage);
     }
-    // public function showCategory(){
-    //     // $allCategories= DB::table('categories')->where('postID',$postID)->get();
-    //     $allCategories=categories::all();
-    //     $manageCategories= view('admin.managePosts')->with('managePosts', $allCategories);
-    //     // $managerCategory= view('admin.editPosts')->with('allCategories', $allCategories);
-    //     // dd($allCategories);
-    //     // return view('admin.editPosts', compact('allCategories'));
-    //     return view('admin.editPosts')->with('allCategories',$manageCategories);
-    //     // return Redirect::to('managePosts');
-    //     // return Redirect::to('editPosts/'.$postID);
-    // }
     public function addImgPage(){
         $allImgPage= DB::table('imgmainpage')->get();
         $managerImgPage= view('admin.add_ImgPage')->with('allImgPage', $allImgPage);
@@ -47,7 +36,7 @@ class AdminManage extends Controller
             $get_image = $request->file('imgPath');
             $new_image = rand(0, 99) . '.' . $get_image->getClientOriginalExtension();
             $get_image->move(public_path('frontend/video'), $new_image);
-            $imgPage->imgPath = '' . $new_image;
+            $imgPage->imgPath = '/frontend/video/' . $new_image;
         }
         $imgPage->save();
         Session::put('message','Thêm hình ảnh/video thành công');
@@ -55,50 +44,54 @@ class AdminManage extends Controller
     }
     public function UploadMethod()
     {
-        $latestVideo = imgmainpage::latest()->first();
-        return view('add_ImgPage')->with('latestVideo', $latestVideo);
+        // $latestVideo = imgmainpage::latest()->first();
+        // $latestVideo = imgmainpage::latest('updated_at')->first();
+        $latestVideo = imgmainpage::orderBy('imgID', 'desc')->first();
+        // return view('layout.header')->with('latestVideo', $latestVideo);
+        // dd($latestVideo);
+        return view('main', compact('latestVideo'));
     }
-    public function search(Request $request)
-    {
-        $query = $request->input('query');
-        $managePosts = Posts::where('title', 'LIKE', "%$query%")
-                            ->orWhere('author', 'LIKE', "%$query%")
-                            ->get();
+    // public function search(Request $request)
+    // {
+    //     $query = $request->input('query');
+    //     $managePosts = Posts::where('title', 'LIKE', "%$query%")
+    //                         ->orWhere('author', 'LIKE', "%$query%")
+    //                         ->get();
 
-        return view('admin.admin_layout', compact('managePosts'));
-    }
+    //     return view('admin.admin_layout', compact('managePosts'));
+    // }
 
-    public function updatePosts(Request $request, $postID){
-        $data= $request->all();
-        $post= posts::find($postID);
-        $post->title=$data['title'];
-        $post->author=$data['author'];
-        $post->content=$data['content'];
-        $post->categoryID=$data['categoryID'];
-        $post->imgID=$data['imgID'];
-        $post->save();
-        // $data=array();
-        // $data['title']=$request->title;
-        // $data['author']=$request->author;
-        // $data['content']=$request->content;
-        // $data['categoryID']=$request->categoryID;
-        // $data['imgID']=$request->imgID;
-        // DB::table('posts')->where('postID',$postID)->update($data);
-        Session::put('message','Chỉnh sửa bài viết thành công');
-        return Redirect::to('managePosts');
+    // public function updatePosts(Request $request, $postID){
+    //     $data= $request->all();
+    //     $post= posts::find($postID);
+    //     $post->title=$data['title'];
+    //     $post->author=$data['author'];
+    //     $post->content=$data['content'];
+    //     $post->categoryID=$data['categoryID'];
+    //     $post->imgID=$data['imgID'];
+    //     $post->save();
+    //     // $data=array();
+    //     // $data['title']=$request->title;
+    //     // $data['author']=$request->author;
+    //     // $data['content']=$request->content;
+    //     // $data['categoryID']=$request->categoryID;
+    //     // $data['imgID']=$request->imgID;
+    //     // DB::table('posts')->where('postID',$postID)->update($data);
+    //     Session::put('message','Chỉnh sửa bài viết thành công');
+    //     return Redirect::to('managePosts');
 
-    }
+    // }
 
-    public function editPosts($postID){
-        // $editPosts= DB::table('posts')->where('postID',$postID)->get();
-        $editPosts=posts::find($postID);
-        $allPosts= view('admin.editPosts')->with('editPosts', $editPosts);
-        return view('admin.admin_layout')->with('admin.editPosts',$allPosts);
-    }
-    public function deletePosts($postID){
-        DB::table('posts')->where('postID',$postID)->delete();
+    // public function editPosts($postID){
+    //     // $editPosts= DB::table('posts')->where('postID',$postID)->get();
+    //     $editPosts=posts::find($postID);
+    //     $allPosts= view('admin.editPosts')->with('editPosts', $editPosts);
+    //     return view('admin.admin_layout')->with('admin.editPosts',$allPosts);
+    // }
+    public function deleteImgPage($imgID){
+        DB::table('imgmainpage')->where('imgID',$imgID)->delete();
         Session::put('message','Đã xóa bài viết ');
-        return Redirect::to('managePosts');
+        return Redirect::to('manageImgPage');
     }
 
 

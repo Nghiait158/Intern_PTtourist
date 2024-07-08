@@ -13,7 +13,6 @@
                                 Session::put('message',null);
                             }
                         ?>
-      {{-- <h1>Thay đổi Video Background</h1> --}}
 
       @if (session('success'))
           <p style="color: green;">{{ session('success') }}</p>
