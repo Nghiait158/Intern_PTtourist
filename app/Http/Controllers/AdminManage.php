@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
-
+use Illuminate\Support\Facades\View;
 class AdminManage extends Controller
 {
     public function showAdminContent(){ 
@@ -47,9 +47,20 @@ class AdminManage extends Controller
         // $latestVideo = imgmainpage::latest()->first();
         // $latestVideo = imgmainpage::latest('updated_at')->first();
         $latestVideo = imgmainpage::orderBy('imgID', 'desc')->first();
-        // return view('layout.header')->with('latestVideo', $latestVideo);
+        // View::share('latestVideo', $latestVideo);
+        return view('main')->with('latestVideo', $latestVideo);
         // dd($latestVideo);
-        return view('main', compact('latestVideo'));
+        // return view('main', compact('latestVideo'));
+    }
+
+    public function UploadMethod2()
+    {
+        $latestVideo = imgmainpage::orderBy('imgID', 'desc')->first();
+        return view('main')->with('latestVideo', $latestVideo);
+    }public function UploadMethod1()
+    {
+        $latestVideo = imgmainpage::orderBy('imgID', 'desc')->first();
+        return view('doc')->with('latestVideo', $latestVideo);
     }
     // public function search(Request $request)
     // {
@@ -88,9 +99,30 @@ class AdminManage extends Controller
     //     $allPosts= view('admin.editPosts')->with('editPosts', $editPosts);
     //     return view('admin.admin_layout')->with('admin.editPosts',$allPosts);
     // }
-    public function deleteImgPage($imgID){
-        DB::table('imgmainpage')->where('imgID',$imgID)->delete();
-        Session::put('message','Đã xóa bài viết ');
+    // public function deleteImgPage($imgID){
+    //     DB::table('imgmainpage')->where('imgID',$imgID)->delete();
+    //     Session::put('message','Đã xóa bài viết ');
+    //     return Redirect::to('manageImgPage');
+    // }
+    public function deleteImgPage($imgID)
+    {
+        $imgPage = imgmainpage::find($imgID);
+        if ($imgPage) {
+
+            $filePath = $imgPage->imgPath;
+
+            $imgPage->delete();
+
+            // Xóa file khỏi folder
+            if (Storage::exists($filePath)) {
+                Storage::delete($filePath);
+            }
+            Session::put('message', 'Đã xóa video');
+        } else {
+            Session::put('message', 'Video không tồn tại.');
+        }
+
+        // Chuyển hướng về trang quản lý
         return Redirect::to('manageImgPage');
     }
 

@@ -141,14 +141,10 @@
               </div>
 
               <div class="news-card-container">
+                {{-- -------------------------------------------- --}}
                 <div class="news-card-landing-page">
                   <div class="img">
                     <img class="img-icon10" alt="" src="{{ ('/frontend/img/img07.png') }}">
-                    
-                    <div class="img-child">
-                    </div>
-                  </div>
-                  <div class="fillter">
                   </div>
                   <div class="news-card-landing-page-inner">
                     <div class="frame-parent5">
@@ -191,6 +187,8 @@
                     </div>
                   </div>
                 </div>
+                {{-- -------------------------------------------- --}}
+
                 <div class="news-card-landing-page1">
                   <div class="img1">
                     <img class="img-icon11" alt="" src="{{ ('/frontend/img/img08.png') }}">
@@ -244,6 +242,8 @@
                     </div>
                   </div>
                 </div>
+                {{-- -------------------------------------------- --}}
+
                 <div class="news-card-landing-page2">
                   <div class="img2">
                     <img class="img-icon12" alt="" src="{{ ('/frontend/img/img07.png') }}">
@@ -294,6 +294,7 @@
                     </div>
                   </div>
                 </div>
+                {{-- ------------------------------------------------------ --}}
               </div>
               <div class="button-wrapper">
                 <button class="button56">

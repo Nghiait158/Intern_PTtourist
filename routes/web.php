@@ -58,7 +58,8 @@ Route::get('/manageImgPage', [AdminManage::class, 'manageImgPage']);
 Route::get('/', [AdminManage::class, 'UploadMethod']);
 Route::post('/saveImgPage', [AdminManage::class, 'saveImgPage']);
 Route::get('/deleteImgPage/{imgID}', [AdminManage::class, 'deleteImgPage']);
-
+Route::get('/doc', [AdminManage::class, 'UploadMethod1']);
+Route::get('/main', [AdminManage::class, 'UploadMethod2']);
 
 
 
