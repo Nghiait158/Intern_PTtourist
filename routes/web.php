@@ -39,6 +39,8 @@ Route::post('/savePosts', [PostsController::class, 'savePosts']);
 // Route::get('/form', [PostsController::class, 'showForm']);
 // Route::post('/form', [PostsController::class, 'submitForm']);
 Route::get('/searchPosts', [PostsController::class, 'search'])->name('posts.search');
+Route::get('/', [PostsController::class, 'Show3NewPost']);
+
 //--------------------------- tài liệu---------------------------
 Route::get('/doc', [DocController::class, 'index']);
 
@@ -71,7 +73,6 @@ Route::get('/editCategories/{categoryID}', [CategoriesController::class, 'editCa
 Route::post('/updateCategories/{categoryID}', [CategoriesController::class, 'updateCategories']);
 Route::get('/deleteCategories/{categoryID}', [CategoriesController::class, 'deleteCategories']);
 Route::post('/saveCategories', [CategoriesController::class, 'saveCategories']);
-
 
 
 

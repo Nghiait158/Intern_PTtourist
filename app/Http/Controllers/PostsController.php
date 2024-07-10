@@ -15,6 +15,7 @@ use View, Input;
 session_start();
 class PostsController extends Controller
 {
+        // ----------------------------Admin manager -----------------------------
     public function managePosts(){
         // $managePosts= DB::table('posts')->get();
         $managePosts=posts::all();
@@ -103,4 +104,13 @@ class PostsController extends Controller
         Session::put('message','Đã xóa bài viết ');
         return Redirect::to('managePosts');
     }
+
+    // ----------------------------end Admin -----------------------------
+    //  --------------------------Main page-------------------------------
+    public function Show3NewPost(){
+        $posts = posts::orderBy('postID', 'desc')->take(3)->get();
+        dd($posts);
+        return view('main', compact('posts'));
+        // return view('main')->with('posts', $posts);
+    }   
 }
