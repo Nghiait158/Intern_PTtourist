@@ -2344,7 +2344,7 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(15px);
   border-radius: 20px;
-  background-color: var(--color-gray-200);
+  background-color: rgb(255 255 255 / 20%);
   overflow: hidden;
   flex-shrink: 0;
   flex-direction: column;

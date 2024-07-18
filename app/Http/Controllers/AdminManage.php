@@ -63,6 +63,11 @@ class AdminManage extends Controller
         $latestVideo = imgmainpage::orderBy('imgID', 'desc')->first();
         return view('doc')->with('latestVideo', $latestVideo);
     }
+    public function UploadMethod3()
+    {
+        $latestVideo = imgmainpage::orderBy('imgID', 'desc')->first();
+        return view('recDetail')->with('latestVideo', $latestVideo);
+    }
     // public function search(Request $request)
     // {
     //     $query = $request->input('query');

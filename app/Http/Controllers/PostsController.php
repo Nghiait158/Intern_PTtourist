@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use App\Models\postsModel;
 use App\Models\categories;
-use App\Models\posts;
+use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Subject;
 use View, Input;
@@ -18,7 +18,7 @@ class PostsController extends Controller
         // ----------------------------Admin manager -----------------------------
     public function managePosts(){
         // $managePosts= DB::table('posts')->get();
-        $managePosts=posts::all();
+        $managePosts=Post::all();
         $allPosts= view('admin.managePosts')->with('managePosts', $managePosts);
         return view('admin.admin_layout')->with('admin.managePosts',$allPosts);
     }
@@ -42,7 +42,7 @@ class PostsController extends Controller
     public function savePosts(Request $request){
 
         $data= $request->all();
-        $post= new posts();
+        $post= new Post();
         $post->title=$data['title'];
         $post->author=$data['author'];
         $post->content=$data['content'];
@@ -65,7 +65,7 @@ class PostsController extends Controller
     public function search(Request $request)
     {
         $query = $request->input('query');
-        $managePosts = Posts::where('title', 'LIKE', "%$query%")
+        $managePosts = Post::where('title', 'LIKE', "%$query%")
                             ->orWhere('author', 'LIKE', "%$query%")
                             ->get();
 
@@ -74,7 +74,7 @@ class PostsController extends Controller
 
     public function updatePosts(Request $request, $postID){
         $data= $request->all();
-        $post= posts::find($postID);
+        $post= Post::find($postID);
         $post->title=$data['title'];
         $post->author=$data['author'];
         $post->content=$data['content'];
@@ -95,7 +95,7 @@ class PostsController extends Controller
 
     public function editPosts($postID){
         // $editPosts= DB::table('posts')->where('postID',$postID)->get();
-        $editPosts=posts::find($postID);
+        $editPosts=Post::find($postID);
         $allPosts= view('admin.editPosts')->with('editPosts', $editPosts);
         return view('admin.admin_layout')->with('admin.editPosts',$allPosts);
     }
@@ -107,10 +107,20 @@ class PostsController extends Controller
 
     // ----------------------------end Admin -----------------------------
     //  --------------------------Main page-------------------------------
-    public function Show3NewPost(){
-        $posts = posts::orderBy('postID', 'desc')->take(3)->get();
-        dd($posts);
-        return view('main', compact('posts'));
-        // return view('main')->with('posts', $posts);
+    public function show3NewPost(){
+        // $posts3 = Post::orderby('postID', 'desc')->take(3)->get();
+        $managePosts = Post::orderby('postID', 'desc')->first();
+
+        // // $posts3= DB::table('posts')-> orderBy('postID', 'desc')->take(3)->get();
+        // // return view('main',['posts3'=>$posts3]);
+        // // return view('main', compact('posts3'));
+        // return view('main')->with('posts3', $posts3);
+        // $managePosts=Post::all();
+        // $allPosts= view('main')->with('managePosts', $managePosts);
+        return view('main')->with('managePosts',$managePosts);
+        
+        // $allPost=Post::all();
+        // $manage_Post= view('main')->with('allPost', $allPost);
+        // return view('layout.header')->with('main',$manage_Post);
     }   
 }

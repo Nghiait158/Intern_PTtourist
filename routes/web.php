@@ -39,7 +39,8 @@ Route::post('/savePosts', [PostsController::class, 'savePosts']);
 // Route::get('/form', [PostsController::class, 'showForm']);
 // Route::post('/form', [PostsController::class, 'submitForm']);
 Route::get('/searchPosts', [PostsController::class, 'search'])->name('posts.search');
-Route::get('/', [PostsController::class, 'Show3NewPost']);
+Route::get('/', [PostsController::class, 'show3NewPost']);
+Route::get('/', [PostsController::class, 'show3NewPost']);
 
 //--------------------------- tài liệu---------------------------
 Route::get('/doc', [DocController::class, 'index']);
@@ -50,7 +51,7 @@ Route::get('/doc', [DocController::class, 'index']);
 Route::get('/job_manage', [recruitmentController::class, 'job_manage']);
 Route::get('/add_recruitments', [recruitmentController::class, 'add_recruitments']);
 Route::post('/saveRecruitment', [recruitmentController::class, 'saveRecruitment']);
-
+Route::get('/recDetail', [recruitmentController::class, 'index']);
 
 
 
@@ -62,6 +63,7 @@ Route::post('/saveImgPage', [AdminManage::class, 'saveImgPage']);
 Route::get('/deleteImgPage/{imgID}', [AdminManage::class, 'deleteImgPage']);
 Route::get('/doc', [AdminManage::class, 'UploadMethod1']);
 Route::get('/main', [AdminManage::class, 'UploadMethod2']);
+Route::get('/recDetail', [AdminManage::class, 'UploadMethod3']);
 
 
 

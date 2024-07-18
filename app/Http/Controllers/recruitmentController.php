@@ -8,13 +8,13 @@ use Illuminate\Http\Request;
 use App\Models\recruitments;
 class recruitmentController extends Controller
 {
+    public function index(){
+        return view('recDetail');
+    }
     public function job_manage(){  //hiển thị danh sách các job 
         $allRecruitments=recruitments::all();
         $manage_recruitment= view('admin.job_manage')->with('allRecruitments', $allRecruitments);
         return view('admin.admin_layout')->with('admin.job_manage',$manage_recruitment);
-
-
-
     }
     public function add_recruitments(){
         return view('admin.add_recruitments');

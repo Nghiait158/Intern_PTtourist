@@ -64,7 +64,7 @@
             </div>
             <div class="nav-item-container3">
               <div class="nav-bar-item5">
-                <a class="ti-liu">Tuyển dụng</a>
+                <a class="ti-liu" href="/recDetail">Tuyển dụng</a>
               </div>
             </div>
           </header>
