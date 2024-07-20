@@ -1,7 +1,7 @@
 @extends('layout/header')
 @section('content')
-<h1>My Article</h1> 
-    <h2>{{ $articleName }}</h2>
+    {{-- <h1>My Article</h1> 
+    <h2>{{ $articleName }}</h2>  --}}
         <div class="bg-inner">
           <div class="frame-parent">
             <div class="frame-wrapper">
@@ -143,7 +143,7 @@
 
               <div class="news-card-container">
                 {{-- -------------------------------------------- --}}
-                {{-- @foreach($managePosts as $post) --}}
+                @foreach($posts ?? [] as $post ) 
                 <div class="news-card-landing-page">
                   <div class="img">
                     <img class="img-icon10" alt="" src="{{ ('/frontend/img/img07.png') }}">
@@ -153,14 +153,14 @@
                     <div class="frame-parent5">
                       <div class="news-card-header-parent">
                         <div class="news-card-header">
-                          {{-- <div class="admin">{{ $post->author }}</div> --}}
+                          <div class="admin">{{ $post->author }}</div>
                           <div class="news-card-header-inner">
                             <div class="frame-child3">
                             </div>
                           </div>
                         </div>
-                        {{-- <p class="thng-bo-kt">{{ $post->title }}</p> --}}
-                        {{-- <p class="cng-ty-c4">{{ Str::limit($post->content, 100, '...') }}</p> --}}
+                        <p class="thng-bo-kt">{{ $post->title }}</p>
+                        <p class="cng-ty-c4">{{ Str::limit($post->content, 100, '...') }}</p>
                       </div>
                       <div class="news-card-footer-parent">
                         <div class="news-card-footer">
@@ -190,9 +190,9 @@
                     </div>
                   </div>
                 </div>
-                {{-- @endforeach --}}
+                @endforeach
                 {{-- -------------------------------------------- --}}
-
+{{-- 
                  <div class="news-card-landing-page1">
                   <div class="img1">
                     <img class="img-icon11" alt="" src="{{ ('/frontend/img/img08.png') }}">
@@ -245,10 +245,10 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> --}}
                 {{-- -------------------------------------------- --}}
 
-                <div class="news-card-landing-page2">
+                {{-- <div class="news-card-landing-page2">
                   <div class="img2">
                     <img class="img-icon12" alt="" src="{{ ('/frontend/img/img07.png') }}">
                     
@@ -297,7 +297,7 @@
                       </div>
                     </div>
                   </div>
-                </div> 
+                </div>  --}}
                 {{-- ------------------------------------------------------ --}}
               </div>
               <div class="button-wrapper">

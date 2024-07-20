@@ -20,6 +20,7 @@ class PostsController extends Controller
         // $managePosts= DB::table('posts')->get();
         $managePosts=Post::all();
         $allPosts= view('admin.managePosts')->with('managePosts', $managePosts);
+        dd($managePosts);
         return view('admin.admin_layout')->with('admin.managePosts',$allPosts);
     }
     public function showCategory(){
@@ -107,20 +108,25 @@ class PostsController extends Controller
 
     // ----------------------------end Admin -----------------------------
     //  --------------------------Main page-------------------------------
-    public function show3NewPost(){
-        // $posts3 = Post::orderby('postID', 'desc')->take(3)->get();
-        $managePosts = Post::orderby('postID', 'desc')->first();
-
+    public function show3NewestPost(){
+        $managePosts = Post::orderby('postID', 'desc')->take(3)->get();
+        // $managePosts = Post::orderby('postID', 'desc')->first();
+        
         // // $posts3= DB::table('posts')-> orderBy('postID', 'desc')->take(3)->get();
         // // return view('main',['posts3'=>$posts3]);
         // // return view('main', compact('posts3'));
-        // return view('main')->with('posts3', $posts3);
+        
         // $managePosts=Post::all();
         // $allPosts= view('main')->with('managePosts', $managePosts);
-        return view('main')->with('managePosts',$managePosts);
+        // return view('main')->with('posts',$managePosts);
         
         // $allPost=Post::all();
         // $manage_Post= view('main')->with('allPost', $allPost);
         // return view('layout.header')->with('main',$manage_Post);
+
+        // $managePosts=Post::all();
+        // $allPosts= view('admin.managePosts')->with('managePosts', $managePosts);
+        // dd($managePosts);
+        return view('main', ['posts' => $managePosts]);
     }   
 }

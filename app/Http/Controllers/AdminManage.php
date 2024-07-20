@@ -42,22 +42,16 @@ class AdminManage extends Controller
         Session::put('message','Thêm hình ảnh/video thành công');
         return Redirect::to('add_ImgPage');
     }
-    public function UploadMethod()
-    {
-        // $latestVideo = imgmainpage::latest()->first();
-        // $latestVideo = imgmainpage::latest('updated_at')->first();
-        $latestVideo = imgmainpage::orderBy('imgID', 'desc')->first();
-        // View::share('latestVideo', $latestVideo);
-        return view('main')->with('latestVideo', $latestVideo);
-        // dd($latestVideo);
-        // return view('main', compact('latestVideo'));
-    }
+    // public function UploadMethod()
+    // {
+        
+    //     $latestVideo = imgmainpage::orderBy('imgID', 'desc')->first();
+     
+    //     return view('main')->with('latestVideo', $latestVideo);
+       
+    // }
 
-    public function UploadMethod2()
-    {
-        $latestVideo = imgmainpage::orderBy('imgID', 'desc')->first();
-        return view('main')->with('latestVideo', $latestVideo);
-    }
+
     public function UploadMethod1()
     {
         $latestVideo = imgmainpage::orderBy('imgID', 'desc')->first();

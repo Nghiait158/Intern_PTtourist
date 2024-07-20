@@ -21,8 +21,6 @@ Route::get('/posts2', function () {
 
 
 // ---------------------------BackEnd---------------------------
-
-// Route::get('/main', [HomeController::class, 'index']);
 Route::get('/main', [HomeController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
 
@@ -39,8 +37,10 @@ Route::post('/savePosts', [PostsController::class, 'savePosts']);
 // Route::get('/form', [PostsController::class, 'showForm']);
 // Route::post('/form', [PostsController::class, 'submitForm']);
 Route::get('/searchPosts', [PostsController::class, 'search'])->name('posts.search');
-Route::get('/', [PostsController::class, 'show3NewPost']);
-Route::get('/', [PostsController::class, 'show3NewPost']);
+
+
+// Route::get('/main', [PostsController::class, 'show3NewestPost']);
+Route::get('/test', [PostsController::class, 'show3NewestPost2']);
 
 //--------------------------- tài liệu---------------------------
 Route::get('/doc', [DocController::class, 'index']);
@@ -58,11 +58,11 @@ Route::get('/recDetail', [recruitmentController::class, 'index']);
 // -------------------------Hình ảnh------------------------------
 Route::get('/add_ImgPage', [AdminManage::class, 'addImgPage']);
 Route::get('/manageImgPage', [AdminManage::class, 'manageImgPage']);
-Route::get('/', [AdminManage::class, 'UploadMethod']);
+// Route::get('/', [AdminManage::class, 'UploadMethod']);
 Route::post('/saveImgPage', [AdminManage::class, 'saveImgPage']);
 Route::get('/deleteImgPage/{imgID}', [AdminManage::class, 'deleteImgPage']);
-Route::get('/doc', [AdminManage::class, 'UploadMethod1']);
-Route::get('/main', [AdminManage::class, 'UploadMethod2']);
+// Route::get('/doc', [AdminManage::class, 'UploadMethod1']);
+// Route::get('/main', [AdminManage::class, 'UploadMethod2']); // thay chua
 Route::get('/recDetail', [AdminManage::class, 'UploadMethod3']);
 
 
