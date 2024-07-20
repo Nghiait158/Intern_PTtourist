@@ -18,9 +18,10 @@ class PostsController extends Controller
         // ----------------------------Admin manager -----------------------------
     public function managePosts(){
         // $managePosts= DB::table('posts')->get();
-        $managePosts=Post::all();
+        // $managePosts=Post::all();
+        $managePosts = Post::orderBy('publishedDate', 'desc')->get();
         $allPosts= view('admin.managePosts')->with('managePosts', $managePosts);
-        dd($managePosts);
+        // dd($managePosts);
         return view('admin.admin_layout')->with('admin.managePosts',$allPosts);
     }
     public function showCategory(){
