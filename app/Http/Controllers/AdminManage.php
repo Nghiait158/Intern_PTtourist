@@ -24,7 +24,6 @@ class AdminManage extends Controller
         $allImgPage= DB::table('imgmainpage')->get();
         $managerImgPage= view('admin.add_ImgPage')->with('allImgPage', $allImgPage);
         return view('dashboard')->with('admin.add_ImgPage',$managerImgPage);
-        // return view('admin.addPosts');
     }
     public function saveImgPage(Request $request){
 
@@ -50,13 +49,6 @@ class AdminManage extends Controller
     //     return view('main')->with('latestVideo', $latestVideo);
        
     // }
-
-
-    public function UploadMethod1()
-    {
-        $latestVideo = imgmainpage::orderBy('imgID', 'desc')->first();
-        return view('doc')->with('latestVideo', $latestVideo);
-    }
     public function UploadMethod3()
     {
         $latestVideo = imgmainpage::orderBy('imgID', 'desc')->first();
@@ -135,20 +127,20 @@ class AdminManage extends Controller
     }
     
 
-    public function uploadVideo(Request $request)
-    {
-        $request->validate([
-            'video' => 'required|mimes:mp4|max:20480',
-            'description' => 'required|string|max:255',
-        ]);
+    // public function uploadVideo(Request $request)
+    // {
+    //     $request->validate([
+    //         'video' => 'required|mimes:mp4|max:20480',
+    //         'description' => 'required|string|max:255',
+    //     ]);
 
-        $path = $request->file('video')->store('videos', 'public');
+    //     $path = $request->file('video')->store('videos', 'public');
 
-        $video = new ImgMainPage();
-        $video->description = $request->description;
-        $video->imgPath = $path;
-        $video->save();
+    //     $video = new ImgMainPage();
+    //     $video->description = $request->description;
+    //     $video->imgPath = $path;
+    //     $video->save();
 
-        return redirect()->route('addImgPage')->with('success', 'Video uploaded successfully.');
-    }
+    //     return redirect()->route('addImgPage')->with('success', 'Video uploaded successfully.');
+    // }
 }

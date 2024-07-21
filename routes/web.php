@@ -40,14 +40,29 @@ Route::get('/searchPosts', [PostsController::class, 'search'])->name('posts.sear
 
 
 // Route::get('/main', [PostsController::class, 'show3NewestPost']);
-Route::get('/test', [PostsController::class, 'show3NewestPost2']);
+// Route::get('/test', [PostsController::class, 'show3NewestPost2']);
 
 //--------------------------- tài liệu---------------------------
-Route::get('/doc', [DocController::class, 'index']);
+Route::get('/docs', [DocController::class, 'index']);
+
+
+
+Route::get('/add_Doc', [DocController::class, 'addDoc']);
+Route::get('/editDoc/{docID}', [DocController::class, 'editDoc']);
+Route::get('/deleteDoc', [DocController::class, 'deleteDoc']);
+Route::get('/deleteDoc/{docID}', [DocController::class, 'deleteDoc']);
+// Route::get('/addDoc', [DocController::class, 'addDoc']);
+Route::get('/manageDocs', [DocController::class, 'manageDocs']);
+Route::post('/saveDoc', [DocController::class, 'saveDoc']);
+Route::post('/updateDoc/{docID}', [DocController::class, 'updateDoc']);
 
 
 
 // ---------------------------tuyển dụng -------------------------------
+Route::get('/rec', [recruitmentController::class, 'index']);
+
+
+
 Route::get('/job_manage', [recruitmentController::class, 'job_manage']);
 Route::get('/add_recruitments', [recruitmentController::class, 'add_recruitments']);
 Route::post('/saveRecruitment', [recruitmentController::class, 'saveRecruitment']);

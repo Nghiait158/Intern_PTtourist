@@ -101,7 +101,7 @@ class PostsController extends Controller
         $allPosts= view('admin.editPosts')->with('editPosts', $editPosts);
         return view('admin.admin_layout')->with('admin.editPosts',$allPosts);
     }
-    public function deletePosts($postID){
+    public function deleteDoc($postID){
         DB::table('posts')->where('postID',$postID)->delete();
         Session::put('message','Đã xóa bài viết ');
         return Redirect::to('managePosts');

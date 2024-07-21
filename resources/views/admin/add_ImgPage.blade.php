@@ -19,7 +19,7 @@
       @endif
   
       <form action="{{ URL::to('/saveImgPage') }}" method="POST" enctype="multipart/form-data">
-          @csrf
+        {{ csrf_field() }}
           <label for="video">Chọn video mới:</label>
           <div class="form-group">
             <label for="description">Mô tả(description)</label>

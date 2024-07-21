@@ -6,10 +6,20 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use App\Models\recruitments;
+use App\Models\imgmainpage;
 class recruitmentController extends Controller
 {
     public function index(){
-        return view('recDetail');
+        $data = $this->rec();
+        return view('rec', $data);
+    }
+        function rec() {
+        $latestVideo = imgmainpage::orderBy('imgID', 'desc')->first();
+
+        return [
+            'latestVideo' => $latestVideo,
+      
+        ];
     }
     public function job_manage(){  //hiển thị danh sách các job 
         $allRecruitments=recruitments::all();

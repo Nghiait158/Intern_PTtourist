@@ -59,12 +59,12 @@
             </div>
             <div class="nav-item-container2">
               <div class="nav-bar-item4">
-                <a class="ti-liu" href="/doc">Tài liệu</a>
+                <a class="ti-liu" href="/docs">Tài liệu</a>
               </div>
             </div>
             <div class="nav-item-container3">
               <div class="nav-bar-item5">
-                <a class="ti-liu" href="/recDetail">Tuyển dụng</a>
+                <a class="ti-liu" href="/rec">Tuyển dụng</a>
               </div>
             </div>
           </header>

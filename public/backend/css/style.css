@@ -945,7 +945,7 @@ div#graph1,div#graph4,div#graph5,div#graph6,div#graph7,div#graph8,div#graph9 {
     color: #555;
 }
 .table>thead>tr>th {
-    border-bottom: 1px solid #e1ab91 ! important;
+    border-bottom: 1px solid #000000 ! important;
 }
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
     border-bottom: 1px solid #e9e9e9 ! important;
