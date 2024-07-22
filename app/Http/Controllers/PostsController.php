@@ -16,6 +16,7 @@ session_start();
 class PostsController extends Controller
 {
         // ----------------------------Admin manager -----------------------------
+        
     public function managePosts(){
         // $managePosts= DB::table('posts')->get();
         // $managePosts=Post::all();
@@ -50,6 +51,7 @@ class PostsController extends Controller
         $post->content=$data['content'];
         $post->categoryID=$data['categoryID'];
         $post->imgID=$data['imgID'];
+        
         $post->save();
         // $data= array();
         // $data['title']=$request->title;

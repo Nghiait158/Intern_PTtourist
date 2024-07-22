@@ -164,15 +164,15 @@
                       </div>
                       <div class="news-card-footer-parent">
                         <div class="news-card-footer">
-                          <div class="div7">
-                            <b class="news-card-tag">Sự kiện</b>
-                          </div>
-                          <div class="div8">
-                            <b class="news-card-date">Thông báo</b>
-                          </div>
-                          <div class="div9">
-                            <b class="news-card-author">Tin tức</b>
-                          </div>
+                          @foreach($category as $cate)
+                            @if($post->categoryID == $cate->categoryID)
+
+                              <div class="div7">
+                              <b class="news-card-tag"> {{ $cate -> name }} </b>
+                              </div>
+                            @endif
+                            
+                          @endforeach
                         </div>
                         <div class="frame-parent6">
                           <div class="n-lt-xem-wrapper">

@@ -60,6 +60,7 @@ Route::post('/updateDoc/{docID}', [DocController::class, 'updateDoc']);
 
 // ---------------------------tuyển dụng -------------------------------
 Route::get('/rec', [recruitmentController::class, 'index']);
+Route::get('/rec/{recruitmentID}', [recruitmentController::class, 'recDetail']);
 
 
 

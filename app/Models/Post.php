@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    public $timestamps=false;
+    use HasFactory;
+    public $timestamps=true;
 
     protected $fillable=[
         'title','content','imgID','categoryID','author'

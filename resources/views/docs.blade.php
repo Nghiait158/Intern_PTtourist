@@ -310,7 +310,7 @@
                     </thead>
                     <tbody class="table-content">
                       @php $i = 0; @endphp
-                        @foreach ($doc10first as $doc)
+                        @foreach ($doc10first ?? [] as $doc)
                             @php $i++; @endphp
                         <tr>
                             <td>{{ $i }}</td>

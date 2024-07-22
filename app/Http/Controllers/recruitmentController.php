@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
-use App\Models\recruitments;
+use App\Models\Recruitments;
 use App\Models\imgmainpage;
 class recruitmentController extends Controller
 {
@@ -15,14 +15,30 @@ class recruitmentController extends Controller
     }
         function rec() {
         $latestVideo = imgmainpage::orderBy('imgID', 'desc')->first();
-
+        $allRec= Recruitments::orderBy('publishedDate', 'desc')->take(9)->get();
+        // dd($allRec);      
         return [
             'latestVideo' => $latestVideo,
-      
+            'allRec'=> $allRec,
         ];
     }
+    public function recDetail($recruitmentID){
+        $data = $this->recDe($recruitmentID);
+        return view('recDetail', $data);
+    }
+        function recDe($recruitmentID) {
+            $latestVideo = imgmainpage::orderBy('imgID', 'desc')->first();
+            // $viewDeRec=Recruitments::find($recruitmentID);
+            $viewDeRec = Recruitments::where('recruitmentID', $recruitmentID)->first();
+            // dd($viewDeRec);
+        return [
+            'viewDeRec'=> $viewDeRec,
+            'latestVideo' => $latestVideo,
+        ];
+    }
+   
     public function job_manage(){  //hiển thị danh sách các job 
-        $allRecruitments=recruitments::all();
+        $allRecruitments=Recruitments::all();
         $manage_recruitment= view('admin.job_manage')->with('allRecruitments', $allRecruitments);
         return view('admin.admin_layout')->with('admin.job_manage',$manage_recruitment);
     }
@@ -33,7 +49,7 @@ class recruitmentController extends Controller
 
     public function saveRecruitment(Request $request){
         $data= $request->all();
-        $recruiment= new recruitments();
+        $recruiment= new Recruitments();
         $recruiment->position=$data['position'];
         $recruiment->description=$data['description'];
         $recruiment->requirements=$data['requirements'];

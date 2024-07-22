@@ -154,6 +154,7 @@
   font-family: inherit;
   z-index: 2;
 }
+
 .page-content,
 .vector-parent {
   display: flex;

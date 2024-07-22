@@ -14,6 +14,8 @@
 <link rel="stylesheet" type="text/css" href="{{('/frontend/css/style.css')}}" />
 <link rel="stylesheet" type="text/css" href="{{('/frontend/css/global.css')}}" />
 <link rel="stylesheet" type="text/css" href="{{('/frontend/css/tailieu.css')}}" />
+{{-- <link rel="stylesheet" type="text/css" href="{{('/frontend/css/globalrec.css')}}" /> --}}
+{{-- <link rel="stylesheet" type="text/css" href="{{('/frontend/css/indexrec.css')}}" /> --}}
 {{-- <link rel="stylesheet" type="text/css" href="{{('/frontend/css/styleguides.css')}}" /> --}}
 
       <style>
@@ -29,12 +31,13 @@
       
       <main class="bg-group">
         <section class="bg1">
-          <div class="container-fluid remove-vid-marg">
-        <div class="vid-parent">
-          @include('video_background')
-          <div class="vid-overlay"></div>
-        </div>
-    </div> <!-- End Video Background -->
+        <div class="container-fluid remove-vid-marg">
+          <div class="vid-parent">
+            @include('video_background')
+            <div class="vid-overlay"></div>
+          </div>
+        </div> <!-- End Video Background -->
+      
           <header class="navigation1">
             <img class="material-symbolsmenu-rounded-icon1" alt="">
             
