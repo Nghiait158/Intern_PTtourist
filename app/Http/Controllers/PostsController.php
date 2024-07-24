@@ -10,13 +10,53 @@ use App\Models\postsModel;
 use App\Models\categories;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use App\Models\imgmainpage;
 use App\Http\Controllers\Subject;
 use View, Input;
 session_start();
 class PostsController extends Controller
 {
         // ----------------------------Admin manager -----------------------------
-        
+        public function index(){
+            $data = $this->posts();
+            return view('posts2', $data);
+        }
+    
+        function posts() {
+            $latestVideo = imgmainpage::orderBy('imgID', 'desc')->first();
+            $allPost= Post::orderBy('publishedDate', 'desc')->get();
+            $post12first = Post::orderBy('updated_at', 'desc')->take(12)->get();
+            $firstPost = Post::orderBy('postID', 'desc')->first();
+            $category =categories::all();
+            return [
+                'latestVideo' => $latestVideo,
+                'allPost'=> $allPost,
+                'post12first'=>$post12first,
+                'firstPost'=>$firstPost,
+                'category'=>$category,
+            ];
+        }   
+
+        public function postDetail($postID){
+            $data = $this->postDe($postID);
+            return view('postDetail', $data);
+        }
+            function postDe($postID) {
+                $latestVideo = imgmainpage::orderBy('imgID', 'desc')->first();
+                $viewDePost = Post::where('postID', $postID)->first();
+                $post4first = Post::orderBy('updated_at', 'desc')->take(4)->get();
+
+                $category =categories::all();
+                // dd($viewDePost);
+            return [
+                'latestVideo' => $latestVideo,
+                'viewDePost'=>$viewDePost,
+                'post4first'=>$post4first,
+                'category'=>$category,
+            ];
+        }
+    
+
     public function managePosts(){
         // $managePosts= DB::table('posts')->get();
         // $managePosts=Post::all();

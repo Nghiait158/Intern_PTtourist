@@ -50,7 +50,7 @@
             </div>
             <div class="navigation-items1">
               <div class="nav-bar-item">
-                <a class="ti-liu1" href="/posts">Bài viết</a>
+                <a class="ti-liu1" href="/posts2">Bài viết</a>
               </div>
             </div>
             <div class="logo-ngang" id="logoNgangContainer">
@@ -310,7 +310,7 @@
                       {{-- ---------------------------------------------------------------------------------------- --}}
               @foreach ($allRec as $rec)
                   
-              
+              <a href="{{ URL::to('/rec/'.$rec->recruitmentID) }}">
               <div class="card-tuyen-dung">
                 <div class="listing-content-parent">
                   <div class="listing-content">
@@ -405,6 +405,7 @@
                   <div class="xem-thm">Xem chi tiết</div>
                 </button>
               </div>
+            </a>
               @endforeach
               {{-- ---------------------------------------------------------------- --}}
 

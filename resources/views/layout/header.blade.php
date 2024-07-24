@@ -14,7 +14,7 @@
 <link rel="stylesheet" type="text/css" href="{{('/frontend/css/style.css')}}" />
 <link rel="stylesheet" type="text/css" href="{{('/frontend/css/global.css')}}" />
 <link rel="stylesheet" type="text/css" href="{{('/frontend/css/tailieu.css')}}" />
-{{-- <link rel="stylesheet" type="text/css" href="{{('/frontend/css/globalrec.css')}}" /> --}}
+{{-- <link rel="stylesheet" type="text/css" href="{{('/frontend/css/post.css')}}" /> --}}
 {{-- <link rel="stylesheet" type="text/css" href="{{('/frontend/css/indexrec.css')}}" /> --}}
 {{-- <link rel="stylesheet" type="text/css" href="{{('/frontend/css/styleguides.css')}}" /> --}}
 
@@ -49,7 +49,7 @@
             <div class="nav-item-container1">
               <div class="nav-bar-item3">
                 {{-- <a class="ti-liu">Bài viết</a> --}}
-                <a class="ti-liu" href="/posts">Bài viết</a>
+                <a class="ti-liu" href="/posts2">Bài viết</a>
               </div>
             </div>
             <div class="logo-ngang2" id="logoNgangContainer">

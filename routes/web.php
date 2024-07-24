@@ -13,9 +13,9 @@ use App\Models\categories;
 Route::get('/wel', function () {
     return view('welcome');
 });
-Route::get('/posts2', function () {
-    return view('posts2');
-});
+// Route::get('/posts2', function () {
+//     return view('posts2');
+// });
 
 
 
@@ -25,6 +25,11 @@ Route::get('/main', [HomeController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
 
 //--------------------------- Bài viết ---------------------------
+Route::get('/posts2', [PostsController::class, 'index']);
+Route::get('/postDetail/{postID}', [PostsController::class, 'postDetail']);
+
+
+
 Route::get('/managePosts', [PostsController::class, 'managePosts']);
 Route::get('/addPosts', [PostsController::class, 'addPosts']);
 Route::get('/editPosts/{postID}', [PostsController::class, 'editPosts','showCategory']);
@@ -60,7 +65,8 @@ Route::post('/updateDoc/{docID}', [DocController::class, 'updateDoc']);
 
 // ---------------------------tuyển dụng -------------------------------
 Route::get('/rec', [recruitmentController::class, 'index']);
-Route::get('/rec/{recruitmentID}', [recruitmentController::class, 'recDetail']);
+Route::get('/recDetail/{recruitmentID}', [recruitmentController::class, 'recDetail']);
+Route::post('/saveRecForm', [recruitmentController::class, 'saveRecForm']);
 
 
 
@@ -68,6 +74,7 @@ Route::get('/job_manage', [recruitmentController::class, 'job_manage']);
 Route::get('/add_recruitments', [recruitmentController::class, 'add_recruitments']);
 Route::post('/saveRecruitment', [recruitmentController::class, 'saveRecruitment']);
 Route::get('/recDetail', [recruitmentController::class, 'index']);
+Route::post('/saveRecForm', [recruitmentController::class, 'saveRecForm']);
 
 
 

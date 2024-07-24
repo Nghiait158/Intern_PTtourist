@@ -44,12 +44,12 @@
 
             <div class="component-13-wrapper">
               <div class="component-13">
-                <b class="ti-liu" href="/main">Trang chủ</b>
+                <a class="ti-liu" href="/main">Trang chủ</a>
               </div>
             </div>
             <div class="nav-bar-item-wrapper">
               <div class="nav-bar-item">
-                <b class="ti-liu1" href="/posts">Bài viết</b>
+                <a class="ti-liu1" href="/posts2">Bài viết</a>
               </div>
             </div>
             <div class="logo-ngang" id="logoNgangContainer">
@@ -61,12 +61,12 @@
             </div>
             <div class="nav-bar-item-container">
               <div class="nav-bar-item1">
-                <b class="ti-liu2" href="/docs">Tài liệu</b>
+                <a class="ti-liu2" href="/docs">Tài liệu</a>
               </div>
             </div>
             <div class="nav-bar-item-frame">
               <div class="nav-bar-item2" id="navBarItemContainer">
-                <b class="ti-liu3" href="/rec">Tuyển dụng</b>
+                <a class="ti-liu3" href="/rec">Tuyển dụng</a>
               </div>
             </div>
           </div>
@@ -133,7 +133,8 @@
             </div>
             
             <div class="frame-div">
-                <form role="form" action="{{URL::to('/savePosts')}}" method="post">
+                <form role="form" action="{{URL::to('/saveRecForm')}}" method="POST" enctype="multipart/form-data">
+                  {{ csrf_field() }}
               <div class="ng-tuyn-online-wrapper">
                 <div class="ng-tuyn-online">Ứng tuyển Online</div>
               </div>
@@ -145,31 +146,31 @@
                       <div class="personal-info-input-labels">
                         <div class="h-tn">Họ tên</div>
                         <div class="personal-info-input-values">
-                          <input class="nguyn-vn-a" placeholder="Nguyễn Văn A">
+                          <input class="nguyn-vn-a" name="name" id="name" placeholder="Nguyễn Văn A">
                         </div>
                       </div>
                       <div class="personal-info-input-labels1">
                         <div class="nm-sinh">Năm sinh</div>
                         <div class="container">
-                          <input class="div1" placeholder="12-12-2000">
+                          <input class="div1" name="yearOfBirth" id="yearOfBirth" placeholder="12-12-2000">
                         </div>
                       </div>
                       <div class="personal-info-input-labels2">
                         <div class="ni-hin">Nơi ở hiện nay</div>
                         <div class="u-c-phng-9-tn-bnh-tp-h-wrapper">
-                          <input class="u-c-phng" placeholder="123 Âu Cơ, Phường 9, Tân Bình, TP HCM">
+                          <input class="u-c-phng" name="place" id="place" placeholder="123 Âu Cơ, Phường 9, Tân Bình, TP HCM">
                         </div>
                       </div>
                       <div class="personal-info-input-labels3">
                         <div class="email">Email</div>
                         <div class="nguyenvanagmailcom-wrapper">
-                          <input class="nguyenvanagmailcom" placeholder="Nguyenvana@gmail.com">
+                          <input class="nguyenvanagmailcom" name="email" id="email" placeholder="Nguyenvana@gmail.com">
                         </div>
                       </div>
                       <div class="personal-info-input-labels4">
                         <div class="trnh1">Trình độ</div>
                         <div class="i-hc-wrapper">
-                          <input class="i-hc" placeholder="Đại học">
+                          <input class="i-hc" name="academicLevel" id="academicLevel" placeholder="Đại học">
                         </div>
                       </div>
                       <div class="bn-c-sn">
@@ -197,19 +198,19 @@
                           <div class="khng">Không</div>
                         </div> --}}
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefaultct" id="flexRadioDefault1">
+                            <input class="form-check-input" type="radio" name="longDayWork" id="Co" value="Co">
                             <label class="form-check-label" for="flexRadioDefault1">
                               Có
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefaultct" id="flexRadioDefault2" checked>
+                            <input class="form-check-input" type="radio" name="longDayWork" id="TuyThoiDiem" value="TuyThoiDiem" >
                             <label class="form-check-label" for="flexRadioDefault2">
                               Tùy thời điểm
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefaultct" id="flexRadioDefault3" checked>
+                            <input class="form-check-input" type="radio" name="longDayWork" id="Khong" value="Khong" checked>
                             <label class="form-check-label" for="flexRadioDefault3">
                               Không
                             </label>
@@ -228,17 +229,17 @@
                       <div class="gii-tnh">Giới tính</div>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefaultgt" id="flexRadioDefault4">
+                        <input class="form-check-input" type="radio" name="sex" id="male" value="male">
                         <label class="form-check-label" for="flexRadioDefault4">
                           Nam   
                         </label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefaultgt" id="flexRadioDefault5" checked>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sex" id="female" value="female">
                         <label class="form-check-label" for="flexRadioDefault5">
                           Nữ
                         </label>
-                      </div>
+                    </div>
                     {{-- <div class="gender-options">
                       <div class="gender-radio-buttons-container-parent">
                         <div class="gender-radio-buttons-container">
@@ -260,7 +261,7 @@
                     <div class="contact-info-fields">
                       <div class="ni-sinh">Nơi sinh</div>
                       <div class="contact-info-values">
-                        <input class="phng-6-qun" placeholder="Phường 6, Quận Tân Bình, TP HCM">
+                        <input class="phng-6-qun" name="placeOfBirth" id="placeOfBirth" placeholder="Phường 6, Quận Tân Bình, TP HCM">
 
                       </div>
                     </div>
@@ -278,20 +279,20 @@
                           <div class="attachment">+84</div>
                         </div>
                         <div class="attachment-button">
-                          <input class="attachment-icon" placeholder="0123456789"></div>
+                          <input class="attachment-icon" name="phone" id="phone" placeholder="0123456789"></div>
 
                       </div>
                     </div>
                     <div class="contact-info-fields2">
                       <div class="facebook-c-nhn">Facebook cá nhân</div>
                       <div class="facebookcomvn-wrapper">
-                        <input class="facebookcomvn" placeholder="facebook.com.vn">
+                        <input class="facebookcomvn" name="facebookLink" id="facebookLink" placeholder="facebook.com.vn">
                       </div>
                     </div>
                     <div class="contact-info-fields3">
                       <div class="nh-km-cv">Đính kèm CV</div>
                       <div class="khng-c-tp-tin-no-c-chn-parent">
-                        <input class="khng-c-tp" placeholder="Không có tập tin nào được chọn">
+                        <input class="khng-c-tp" name="CVpath" id="CVpath" type="file" placeholder="Không có tập tin nào được chọn">
 
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M11.5 22C9.96667 22 8.66667 21.4667 7.6 20.4C6.53333 19.3333 6 18.0333 6 16.5V6C6 4.9 6.39167 3.95833 7.175 3.175C7.95833 2.39167 8.9 2 10 2C11.1 2 12.0417 2.39167 12.825 3.175C13.6083 3.95833 14 4.9 14 6V15.5C14 16.2 13.7583 16.7917 13.275 17.275C12.7917 17.7583 12.2 18 11.5 18C10.8 18 10.2083 17.7583 9.725 17.275C9.24167 16.7917 9 16.2 9 15.5V6H10.5V15.5C10.5 15.7833 10.596 16.021 10.788 16.213C10.98 16.405 11.2173 16.5007 11.5 16.5C11.7833 16.5 12.021 16.404 12.213 16.212C12.405 16.02 12.5007 15.7827 12.5 15.5V6C12.5 5.3 12.2583 4.70833 11.775 4.225C11.2917 3.74167 10.7 3.5 10 3.5C9.3 3.5 8.70833 3.74167 8.225 4.225C7.74167 4.70833 7.5 5.3 7.5 6V16.5C7.5 17.6 7.89167 18.5417 8.675 19.325C9.45833 20.1083 10.4 20.5 11.5 20.5C12.6 20.5 13.5417 20.1083 14.325 19.325C15.1083 18.5417 15.5 17.6 15.5 16.5V6H17V16.5C17 18.0333 16.4667 19.3333 15.4 20.4C14.3333 21.4667 13.0333 22 11.5 22Z" fill="#0054A6"/>
@@ -301,19 +302,19 @@
                     <div class="bn-c-sn1">Bạn có sẵn sàng làm thêm giờ</div>
                     <div class="overtime-options">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefaultltg" id="flexRadioDefault6">
+                            <input class="form-check-input" type="radio" name="overtime" id="Co" value="Co">
                             <label class="form-check-label" for="flexRadioDefault6">
                               Có
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefaultltg" id="flexRadioDefault7" checked>
+                            <input class="form-check-input" type="radio" name="overtime" id="TuyThoiDiem" value="TuyThoiDiem" checked>
                             <label class="form-check-label" for="flexRadioDefault7">
                               Tùy thời điểm
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefaultltg" id="flexRadioDefault8" checked>
+                            <input class="form-check-input" type="radio" name="overtime" id="Khong" value="Khong">
                             <label class="form-check-label" for="flexRadioDefault8">
                               không
                             </label>
@@ -322,20 +323,20 @@
                   </div>
                 </div>
                 <div class="nhng-ni-tng-lm-vic-tr-wrapper">
-                  <textarea class="nhng-ni1" placeholder="Những nơi đã từng làm việc trước đây"></textarea>
+                  <textarea class="nhng-ni1" name="placeWorkedBefore" id="placeWorkedBefore"  placeholder="Những nơi đã từng làm việc trước đây"></textarea>
 
                 </div>
               </div>
               <div class="kinh-nghim-bn">Kinh nghiệm bản thân</div>
               <div class="experience-and-feedback-button-wrapper">
                 <div class="experience-and-feedback-button">
-                  <textarea class="kinh-nghim-bn1" placeholder="Kinh nghiệm bản thân"></textarea>
+                  <textarea class="kinh-nghim-bn1" name="personalExperience" id="personalExperience" placeholder="Kinh nghiệm bản thân"></textarea>
                 </div>
               </div>
               <div class="button-wrapper">
-                <div class="button">
-                  <div class="phn-hi">Gửi ngay</div>
-                </div>
+                <button  class="button">
+                  <div type="submit" class="phn-hi btn btn-primary">Gửi ngay</div>
+                </button>
               </div>
             </form>
             </div>

@@ -146,7 +146,7 @@
                 @foreach($posts ?? [] as $post ) 
                 <div class="news-card-landing-page">
                   <div class="img">
-                    <img class="img-icon10" alt="" src="{{ ('/frontend/img/img07.png') }}">
+                    <img class="img-icon10" alt="" src="{{ ('/frontend/img/img01.png') }}">
                   </div>
                   
                   <div class="news-card-landing-page-inner">
